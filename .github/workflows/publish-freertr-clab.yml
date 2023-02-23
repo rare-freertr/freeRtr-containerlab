@@ -4,9 +4,10 @@ on:
     branches: ['main']
 jobs:
   publish-freertr-clab-docker-image:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v2
+    - name: Check out the repo
+      uses: actions/checkout@v2
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
       with:
