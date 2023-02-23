@@ -7,7 +7,10 @@ This is an early version of RARE/freeRtr for containerlab network simulator.
 
 We are cheating a bit here ! :-) 
 
-`5s` assumes that you already built the image or you are using an image from external container repository
+`5s` assumes:
+
+* that you already built the image or you are using an image from external container repository
+* that containerlab is already installed
 
 ```
 git clone https://github.com/rare-freertr/freeRtr-docker.git
