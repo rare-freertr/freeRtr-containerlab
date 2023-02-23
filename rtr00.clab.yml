@@ -1,0 +1,12 @@
+name: rtr00
+
+topology:
+  nodes:
+    rtr1:
+      kind: linux
+      image: debian:sid-slim
+    rtr2:
+      kind: linux
+      image: debian:sid-slim
+  links:
+    - endpoints: ["rtr1:eth1","rtr2:eth1"]
