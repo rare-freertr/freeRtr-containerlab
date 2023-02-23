@@ -136,7 +136,7 @@ rtr2#wr
 rtr2#
 ```
 
-## Verification
+## 3. Verification
 
 * From `rtr1`
 
@@ -178,3 +178,35 @@ Congratulation ! You have just run your first `RARE/freeRtr` within `containerla
 > In this example, we have showed a simple lab with 2 `RARE/freeRtr`, but nothing prevents you to create any architecture mixing any other nodes from different vendor flavor. We have our own CI/CD for interoperability tests and we are `100%` compatible with any other NOS. (Cisco IOS-XE, Cisco IOS-XR, Cisco NX-OS, Junos, Arista OS, Nokia SR-OS, FRR, SONIC, <you name it ...> )
 
 If you find an interoperability issue with `RARE/freeRtr`, please do contact us so we can adjust our software !
+  
+## 4. This is just the beginning -> Next step
+  
+`freeRtr-containerlab` is a continuous work-in-progress and EXCITING project. 
+  
+We are pretty conscious of missing points:
+
+  * CI/CD of `RARE/freeRtr` freeRtr-container lab creation. 
+  
+  `i.e` Each time a new code is committed at [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) the container should be created
+  
+  * Integration of management port to `RARE/freeRtr` containerlab
+  
+  `i.e` For now, we access freeRtr-containerlab image using `docker exec`. `Users` should be able to telnet the IPv4/IPv6 address provided by `clab` bridge.
+  
+Feel free to join us if you feel ready to dive into the code and gets your hand dirty. 
+  
+Enjoy your `RARE/freeRtr` experience with `containerlab !
+  
+  
+## 5. Acknowledgement
+  
+Special thanks to:
+  * [containerlab](https://containerlab.dev/)  
+ 
+  Particularly [Roman DODIN](https://github.com/hellt) for his warm welcome and super blazingly fast answer in `containerlab Discord` server 
+
+  * [freeRtr](www.freertr.org) 
+  
+  Particularly [Csaba MATE](http://mc36.nop.hu/) for his `almost` :innocent: bug free code !
+  
+  
