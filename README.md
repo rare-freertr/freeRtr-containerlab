@@ -10,7 +10,7 @@ We are cheating a bit here ! :-)
 `5s` assumes:
 
 * that you already built the image or you are using an image from external container repository
-* that containerlab is already installed
+* that `containerlab` is already installed
 
 ```
 git clone https://github.com/rare-freertr/freeRtr-docker.git
