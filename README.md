@@ -13,7 +13,7 @@ We are cheating a bit here ! :-)
 * that `containerlab` is already installed
 
 ```
-git clone https://github.com/rare-freertr/freeRtr-docker.git
+git clone https://github.com/rare-freertr/freeRtr-containerlab.git
 cd freeRtr-containerlab
 ```
 

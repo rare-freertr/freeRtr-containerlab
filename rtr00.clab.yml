@@ -4,9 +4,9 @@ topology:
   nodes:
     rtr1:
       kind: linux
-      image: debian:sid-slim
+      image: freertr:clab
     rtr2:
       kind: linux
-      image: debian:sid-slim
+      image: freertr:clab
   links:
     - endpoints: ["rtr1:eth1","rtr2:eth1"]
