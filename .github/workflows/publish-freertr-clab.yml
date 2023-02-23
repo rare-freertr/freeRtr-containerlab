@@ -1,9 +1,9 @@
-name: publish-freertr-clab
+name: publish_freertr_clab
 on: 
   push:
     branches: ['main']
 jobs:
-  publish-freertr-clab-docker-image:
+  publish_freertr_clab_docker_image:
     name: Push Docker image t
     runs-on: ubuntu-latest
     steps:
