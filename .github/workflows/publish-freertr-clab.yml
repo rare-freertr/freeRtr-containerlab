@@ -1,5 +1,3 @@
-publish-freertr-clab
-
 name: publish-freertr-clab
 on: [push]
 jobs:
