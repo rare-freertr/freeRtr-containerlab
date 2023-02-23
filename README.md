@@ -187,7 +187,7 @@ We are pretty conscious of missing points:
 
   * CI/CD of `RARE/freeRtr` freeRtr-container lab creation. 
   
-  `i.e` Each time a new code is committed at [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) the container should be created
+  `i.e` Each time a new code is committed at [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) the container should be re-generated
   
   * Integration of management port to `RARE/freeRtr` containerlab
   
