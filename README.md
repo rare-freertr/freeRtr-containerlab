@@ -193,9 +193,12 @@ We are pretty conscious of missing points:
   
   `i.e` For now, we access freeRtr-containerlab image using `docker exec`. `Users` should be able to telnet the IPv4/IPv6 address provided by `clab` bridge.
   
+  We are looking at the best solution in order to solve this problem. Thus, stay tuned ... 
+  
+
 Feel free to join us if you feel ready to dive into the code and gets your hand dirty. 
   
-Enjoy your `RARE/freeRtr` experience with `containerlab !
+Enjoy your `RARE/freeRtr` experience with `containerlab` !
   
   
 ## 5. Acknowledgement
