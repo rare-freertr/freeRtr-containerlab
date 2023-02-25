@@ -81,9 +81,9 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          flavor: latest=true
+          #flavor: latest=true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: "latest"
+          tags: user/app:latest
           #tags: |
           #  type=ref,event=branch
           #  type=ref,event=pr
