@@ -27,7 +27,9 @@ docker build --no-cache -t freertr:clab .
 >We are working on providing a rolling release of RARE/freeRtr image using popular repository such as Dockerhub ...
 >Please be patient and stay tuned !
 
-* Diagram
+## 2. Lab example 
+
+* Lab diagram
 
 ```
 rtr1 <--eth1--> rtr2
@@ -37,8 +39,9 @@ rtr1 <--eth1--> rtr2
 ```
 containerlab deploy --topo rtr00.clab.yml 
 ```
+## Lab configuration
 
-## 2. As an example we will configure the interconnectivity between `rtr1` and `rtr2`
+As a `Hello-world` example, we will configure the interconnectivity between `rtr1` and `rtr2`
 
 Containerlab should display the output below:
 ```
@@ -54,15 +57,14 @@ INFO[0002] Adding containerlab host entries to /etc/hosts file
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
 | # |      Name       | Container ID |    Image     | Kind  |  State  |  IPv4 Address  |     IPv6 Address     |
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
-| 1 | clab-rtr00-rtr1 | cc0b9d7a415c | freertr:clab | linux | running | 172.20.20.2/24 | 2001:172:20:20::2/64 |
-| 2 | clab-rtr00-rtr2 | ab0f0b03d1f3 | freertr:clab | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
+| 1 | clab-rtr00-rtr1 | 244d9da2dcb6 | freertr:clab | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
+| 2 | clab-rtr00-rtr2 | c178a80f65b3 | freertr:clab | linux | running | 172.20.20.2/24 | 2001:172:20:20::2/64 |
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
 ```
 
-* Access `rtr1`
-
-Default login/password is `rare`/`rare`
-
+- Access `rtr1`
+  - Default login/password is `rare`/`rare`
+  - Using Docker
 ```
 ~# docker exec -it clab-rtr00-rtr1 /bin/bash
 root@rtr1:~# telnet localhost 2323
@@ -78,7 +80,33 @@ password:
 line ready
 rare#
 ```
+  - Using ContainerLab OOB management
 
+**OOBM IPv4 address**
+```
+~# telnet 172.20.20.3
+Trying 172.20.20.3...
+Connected to 172.20.20.3.
+Escape character is '^]'.
+welcome
+username:rare
+password:
+line ready
+rtr1#
+```
+
+**OOBM IPv6 address**
+```
+~# telnet 2001:172:20:20::3
+Trying 2001:172:20:20::3...
+Connected to 2001:172:20:20::3.
+Escape character is '^]'.
+welcome
+username:rare
+password:
+line ready
+rtr1#
+```
 * Configure hostname to `rtr1`, VRF `CORE` and `rtr1@eth1` with LLDP assign IPv4 and IPv6
 
 ```
@@ -101,10 +129,9 @@ rtr1#
 
 For the sake of simplicity, we will repeat the steps above for `rtr2` (sorry for nerdy power-user :laughing:)
 
-* Access `rtr2`
-
-Default login/password is `rare`/`rare`
-
+- Access `rtr2`
+  - Default login/password is `rare`/`rare`
+  - Using Docker
 ```
 ~# docker exec -it clab-rtr00-rtr2 /bin/bash
 root@rtr2:~# telnet localhost 2323
@@ -119,7 +146,33 @@ password:
 line ready
 rare#
 ```
+- Using ContainerLab OOB management
 
+**OOBM IPv4 address**
+```
+~# telnet 172.20.20.2
+Trying 172.20.20.2...
+Connected to 172.20.20.2.
+Escape character is '^]'.
+welcome
+username:rare
+password:
+line ready
+rtr2#
+```
+
+**OOBM IPv6 address**
+```
+~# telnet 2001:172:20:20::2
+Trying 2001:172:20:20::2...
+Connected to 2001:172:20:20::2.
+Escape character is '^]'.
+welcome
+username:rare
+password:
+line ready
+rtr2#
+```
 * Configure hostname to `rtr2`, VRF `CORE` and `rtr2@eth1` with LLDP assign IPv4 and IPv6
 
 ```
