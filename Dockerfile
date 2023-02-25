@@ -15,6 +15,7 @@ RUN ./install-clab.sh /rtr
 RUN ./install-clean.sh
 
 COPY ./hwdet-init.sh /rtr
+COPY ./hwdet-mgmt.sh /rtr
 COPY ./start-rtr.sh /rtr
 COPY ./default.cfg /rtr/rtr-sw.txt
 
