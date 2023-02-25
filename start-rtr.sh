@@ -23,5 +23,8 @@ $TRG/hwdet-mgmt.sh
 # using hwdet-init.sh artefacts result 
 $TRG/hwdet-all.sh
 
+sleep 1
+ip addr flush dev eth0
+
 # Prevent container from exiting
 while true; do sleep 1; done

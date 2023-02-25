@@ -41,5 +41,10 @@ interface ethernet255\\
 do write\
 " $TRG/rtr-sw.txt
 
+# flush docker eth0 config 
+# so that freeRtr management connectivity 
+# will take precedence over Linux container 
+ip addr flush dev eth0
+
 exit 0
 
