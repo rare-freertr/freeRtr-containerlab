@@ -78,7 +78,7 @@ welcome
 username:rare
 password:
 line ready
-rare#
+rtr1#
 ```
   - Using ContainerLab OOB management
 
@@ -110,9 +110,7 @@ rtr1#
 * Configure hostname to `rtr1`, VRF `CORE` and `rtr1@eth1` with LLDP assign IPv4 and IPv6
 
 ```
-rare#conf t
-rare(cfg)#hostname rtr1
-rtr1(cfg)#
+rtr1#conf t
 rtr1(cfg)#vrf definition CORE
 rtr1(cfg-vrf)#exit
 rtr1(cfg)#interface ethernet1
@@ -144,7 +142,7 @@ welcome
 username:rare
 password:
 line ready
-rare#
+rtr2#
 ```
 - Using ContainerLab OOB management
 
@@ -176,8 +174,7 @@ rtr2#
 * Configure hostname to `rtr2`, VRF `CORE` and `rtr2@eth1` with LLDP assign IPv4 and IPv6
 
 ```
-rare#conf t
-rare(cfg)#hostname rtr2
+rtr2#conf t
 rtr2(cfg)#vrf definition CORE
 rtr2(cfg-vrf)#exit
 rtr2(cfg)#interface ethernet1
