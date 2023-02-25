@@ -83,10 +83,11 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           flavor: latest=true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=semver,pattern={{version}}
+          tags: "latest"
+          #tags: |
+          #  type=ref,event=branch
+          #  type=ref,event=pr
+          #  type=semver,pattern={{version}}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
