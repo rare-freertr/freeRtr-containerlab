@@ -83,7 +83,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           #flavor: latest=true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: user/app:latest
+          tags: rare-freertr/freertr-containerlab:latest
           #tags: |
           #  type=ref,event=branch
           #  type=ref,event=pr
