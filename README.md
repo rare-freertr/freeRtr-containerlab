@@ -238,7 +238,7 @@ If you find an interoperability issue with `RARE/freeRtr`, please do contact us 
   
 We are pretty conscious of missing points:
 
-  * ~~CI/CD of `RARE/freeRtr` freeRtr-container lab creation. ~~ :arrow_right: `DONE !`
+  * ~~CI/CD of `RARE/freeRtr` freeRtr-container lab creation~~ :arrow_right: `DONE !`
   
   `i.e` `freertr-containerlab:latest` is re-generated very day with latest greated [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) control plane software
   
