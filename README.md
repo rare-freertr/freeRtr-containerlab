@@ -244,7 +244,7 @@ We are pretty conscious of missing points:
   
   * ~~Integration of management port to `RARE/freeRtr` containerlab~~ :arrow_right: `DONE !`
   
-  `i.e` `freeRtr-containerlab:latest: can be accesses using `docker exec` or containerlab `oob` management address. (see above)
+  `i.e` `freeRtr-containerlab:latest` can be accessed either using `docker exec` or containerlab `oob` management address with `telnet`. (see above)
   
   
 Feel free to join us if you feel ready to dive into the code and gets your hand dirty. 
