@@ -22,7 +22,7 @@ cd freeRtr-containerlab
 If you want to build RARE/freeRtr container
 
 ```
-docker build --no-cache -t freertr:clab .
+docker build --no-cache -t freertr-containerlab:latest .
 ```
 >We are working on providing a rolling release of RARE/freeRtr image using popular repository such as Dockerhub ...
 >Please be patient and stay tuned !
