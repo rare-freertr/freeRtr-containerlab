@@ -238,17 +238,15 @@ If you find an interoperability issue with `RARE/freeRtr`, please do contact us 
   
 We are pretty conscious of missing points:
 
-  * CI/CD of `RARE/freeRtr` freeRtr-container lab creation. 
+  * ~~CI/CD of `RARE/freeRtr` freeRtr-container lab creation. ~~ :arrow_right: `DONE !`
   
-  `i.e` Each time a new code is committed at [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) the container should be re-generated
+  `i.e` `freertr-containerlab:latest` is re-generated very day with latest greated [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) control plane software
   
-  * Integration of management port to `RARE/freeRtr` containerlab
+  * ~~Integration of management port to `RARE/freeRtr` containerlab~~ :arrow_right: `DONE !`
   
-  `i.e` For now, we access freeRtr-containerlab image using `docker exec`. `Users` should be able to telnet the IPv4/IPv6 address provided by `clab` bridge.
+  `i.e` `freeRtr-containerlab:latest: can be accesses using `docker exec` or containerlab `oob` management address. (see above)
   
-  We are looking at the best solution in order to solve this problem. Thus, stay tuned ... 
   
-
 Feel free to join us if you feel ready to dive into the code and gets your hand dirty. 
   
 Enjoy your `RARE/freeRtr` experience with `containerlab` !
