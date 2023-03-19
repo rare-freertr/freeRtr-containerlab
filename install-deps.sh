@@ -11,40 +11,20 @@ echo ""
 echo ""
 echo ""
 echo --------------------------------------------- installing $1...
-apt-get -f -y install $1
+apt-get -f -y install --no-install-recommends $1 
 }
+
+export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
 apt-get -f -y dist-upgrade
 
-PKG_LIST="default-jre-headless socat ethtool iproute2 net-tools procps \
+PKG_LIST="apt-utils default-jre-headless socat ethtool iproute2 net-tools procps \
 libpcap-dev openssl libssl-dev libbpf-dev bpftool \
 zip unzip wget psmisc busybox \
-telnet tshark nmap iperf"
+telnet tshark nmap iperf vim"
 
 apt-get -f -y install $PKG_LIST
-
-#for PKG in $PKG_LIST ; do
-#  installPackage $PKG
-#done
-
-: << 'COMMENT'
-for PKG in default-jre-headless socat ethtool iproute2 net-tools procps ; do
-  installPackage $PKG
-  done
-
-for PKG in libpcap-dev openssl libssl-dev libbpf-dev bpftool ; do
-  installPackage $PKG
-  done
-
-for PKG in zip unzip wget psmisc busybox; do
-  installPackage $PKG
-  done
-
-for PKG in telnet tshark nmap iperf; do
-  installPackage $PKG
-  done
-COMMENT
 
 for PKG in apparmor cloudinit; do
   echo ""

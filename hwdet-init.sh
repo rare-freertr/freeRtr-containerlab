@@ -1,29 +1,42 @@
 #!/bin/bash
 
 TRG=/rtr
+RUN_DIR=$TRG/run
+CONF_DIR=$RUN_DIR/conf
+LOGS_DIR=$RUN_DIR/logs
+PCAP_DIR=$RUN_DIR/pcap
+NTFW_DIR=$RUN_DIR/ntfw
+MRT_DIR=$RUN_DIR/mrt
+HW_FILE=$CONF_DIR/rtr-hw.txt
+SW_FILE=$CONF_DIR/rtr-sw.txt
 
-cp /proc/net/dev $TRG/hwdet.eth
-cp /proc/tty/driver/serial $TRG/hwdet.ser
-ip link show > $TRG/hwdet.mac
-
-if [ -f "$TRG/rtr-hw.txt" ] ; then
-  echo "$TRG/rtr-hw.txt already exist ..."
-  echo "Renaming $TRG/rtr-hw.txt to $TRG/rtr-hw.bak"
-  mv $TRG/rtr-hw.txt $TRG/rtr-hw.txt.bak
+if [ ! -d "$CONF_DIR" ] ; then
+  echo "Creating freeRtr run/* folders"
+  mkdir -p $CONF_DIR $LOGS_DIR $PCAP_DIR $NTFW_DIR $MRT_DIR 
 fi
 
-if [ -f "$TRG/hwdet-all.sh.txt" ] ; then
-  echo "$TRG/hwdet-all.sh already exist ..."
-  echo "Renaming $TRG/hwdet-all.sh to /hwdet-all.sh.bak"
-  mv $TRG/hwdet-all.sh $TRG/hwdet-all.sh.bak
+cp /proc/net/dev $CONF_DIR/hwdet.eth
+cp /proc/tty/driver/serial $CONF_DIR/hwdet.ser
+ip link show > $CONF_DIR/hwdet.mac
+
+if [ ! -f "$HW_FILE" ] ; then
+  cp $TRG/rtr-sw.txt $SW_FILE
+  cp $TRG/rtr-hw.txt $HW_FILE
+  ln -s $TRG/pcapInt.bin $CONF_DIR/pcapInt.bin
 fi
 
-if [ -f "$TRG/hwdet-main.sh.txt" ] ; then
-  echo "$TRG/hwdet-main.sh already exist ..."
-  echo "Renaming $TRG/hwdet-main.sh to /hwdet-main.sh.bak"
-  mv $TRG/hwdet-main.sh $TRG/hwdet-main.sh.bak
+if [ -f "$CONF_DIR/hwdet-all.sh" ] ; then
+  echo "$CONF_DIR/hwdet-all.sh already exist ..."
+  echo "Saving previous session $CONF_DIR/hwdet-all.sh to $CONF_DIR/hwdet-all.sh.bak"
+  mv $CONF_DIR/hwdet-all.sh $CONF_DIR/hwdet-all.sh.bak
 fi
 
-java -jar $TRG/rtr.jar test hwdet path $TRG/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0 mem 1024m tcpvrf 2323 OOB 23
-chmod u+x $TRG/hwdet-*.sh
+if [ -f "$CONF_DIR/hwdet-main.sh" ] ; then
+  echo "$CONF_DIR/hwdet-main.sh already exist ..."
+  echo "Renaming $CONF_DIR/hwdet-main.sh to $CONF_DIR/hwdet-main.sh.bak"
+  mv $CONF_DIR/hwdet-main.sh $CONF_DIR/hwdet-main.sh.bak
+fi
+
+java -jar $TRG/rtr.jar test hwdet path $CONF_DIR/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0 mem 1024m tcpvrf 2323 OOB 23
+chmod u+x $CONF_DIR/hwdet-*.sh
 

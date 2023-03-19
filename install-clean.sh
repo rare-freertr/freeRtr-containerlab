@@ -5,7 +5,7 @@
 BASE=/root
 TMP=$BASE/install.rtr
 
-apt autoremove && sudo apt clean
+apt-get autoremove && apt-get clean 
 
 #rm -rf $TMP
 #rm $BASE/install-deps.sh

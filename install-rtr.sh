@@ -25,21 +25,28 @@ tar xf ../binImg/rtr-`uname -m`.tar
 
 mkdir -p $TRG
 
-#cd $TMP/misc/service/
-#./c.sh $TRG
-
 cat > $TRG/update.sh << EOF
 #!/bin/sh
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get remove apparmor
-sudo apt-get autoremove
-sudo apt-get clean
+sudo apt update
+sudo apt dist-upgrade
+sudo apt remove apparmor
+sudo apt autoremove
+sudo apt clean
 sudo sync
 sudo fstrim -v -a -m 1M
 #sudo e4defrag /
 EOF
 chmod +x $TRG/update.sh
+
+echo Configuring freeRtr to $TRG directory
+
+echo net.ipv6.conf.all.disable_ipv6=1 > /etc/sysctl.d/disableipv6.conf
+echo net.ipv6.conf.default.disable_ipv6=1 >> /etc/sysctl.d/disableipv6.conf
+echo kernel.panic=10 > /etc/sysctl.d/panic.conf
+
+cp $TMP/src/rtr.jar $TRG/
+cp $TMP/src/rtr.ver $TRG/
+cp $TMP/binTmp/*.bin $TRG/
 
 sync
 

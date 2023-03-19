@@ -4,6 +4,8 @@
 # remove $TRG if you want to uninstall freeRtr
 # This is the only adherence of freeRtr on the filesystem
 TRG=/rtr
+RUN_DIR=$TRG/run
+CONF_DIR=$RUN_DIR/conf
 
 # Detect eth0 network context allocated by Docker bridge
 
@@ -14,8 +16,8 @@ IPv6=`hostname -i | awk '{print $1}'`
 
 # Identify the end of freeRtr hw|sw file
 
-HW_PENULTIMATE_LINE=`wc -l /rtr/rtr-hw.txt | awk '{print $1}'`
-SW_PENULTIMATE_LINE=`wc -l /rtr/rtr-sw.txt | awk '{print $1}'`
+HW_PENULTIMATE_LINE=`wc -l ${CONF_DIR}/rtr-hw.txt | awk '{print $1}'`
+SW_PENULTIMATE_LINE=`wc -l ${CONF_DIR}/rtr-sw.txt | awk '{print $1}'`
 
 # Insert management interface information
 # to rtr-hw.txt
@@ -23,9 +25,9 @@ SW_PENULTIMATE_LINE=`wc -l /rtr/rtr-sw.txt | awk '{print $1}'`
 # (Arbitrary choice ! Please change it if it bothers you !)
 
 sed -i "${HW_PENULTIMATE_LINE}i\\
-proc ifc255.sh /rtr/pcapInt.bin eth0 22552 127.0.0.1 22551 127.0.0.1\\
+proc ifc255.sh ${CONF_DIR}/pcapInt.bin eth0 22552 127.0.0.1 22551 127.0.0.1\\
 int eth255 eth ${ETH0_MAC} 127.0.0.1 22551 127.0.0.1 22552\
-" $TRG/rtr-hw.txt
+" $CONF_DIR/rtr-hw.txt
 
 # Insert management interface information
 # to rtr-sw.txt
@@ -39,7 +41,7 @@ interface ethernet255\\
  no shutdown\\
  exit\\
 do write\
-" $TRG/rtr-sw.txt
+" $CONF_DIR/rtr-sw.txt
 
 # flush docker eth0 config 
 # so that freeRtr management connectivity 
