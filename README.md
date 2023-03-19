@@ -31,10 +31,18 @@ docker build --no-cache -t freertr-containerlab:latest .
 
 * Lab diagram
 
+The lab definition file is `rtr00.clab.yml`
 ```
 rtr1 <--eth1--> rtr2
 ``` 
+* Create artefact folder for each node (e.g `rtr1` and `rtr2`)
 
+Which format is clab-`lab-name`/`node-name`/run
+
+```
+mkdir -p clab-rtr00/rtr1/run
+mkdir -p clab-rtr00/rtr2/run
+```
 * Run `containerlab` with the generated image and **containerlab** lab example
 ```
 containerlab deploy --topo rtr00.clab.yml 
