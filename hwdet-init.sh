@@ -37,6 +37,6 @@ if [ -f "$CONF_DIR/hwdet-main.sh" ] ; then
   mv $CONF_DIR/hwdet-main.sh $CONF_DIR/hwdet-main.sh.bak
 fi
 
-java -jar $TRG/rtr.jar test hwdet path $CONF_DIR/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0 mem 1024m tcpvrf 2323 OOB 23
+java -jar $TRG/rtr.jar test hwdet path $CONF_DIR/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0/gre0/erspan0/gretap0/ip6tnl0 mem 1024m tcpvrf 2323 OOB 23
 chmod u+x $CONF_DIR/hwdet-*.sh
 
