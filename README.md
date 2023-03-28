@@ -17,7 +17,7 @@ git clone https://github.com/rare-freertr/freeRtr-containerlab.git
 cd freeRtr-containerlab
 ```
 
-* Build container
+## 2. Build container
 
 If you want to build RARE/freeRtr container
 
@@ -27,7 +27,7 @@ docker build --no-cache -t freertr-containerlab:latest .
 >We are working on providing a rolling release of RARE/freeRtr image using popular repository such as Dockerhub ...
 >Please be patient and stay tuned !
 
-## 2. Lab example 
+## 3. Lab example 
 
 * Lab diagram
 
@@ -47,7 +47,7 @@ mkdir -p clab-rtr00/rtr2/run
 ```
 containerlab deploy --topo rtr00.clab.yml 
 ```
-## Lab configuration
+## 4. Lab configuration
 
 As a `Hello-world` example, we will configure the interconnectivity between `rtr1` and `rtr2`
 
@@ -197,7 +197,7 @@ rtr2#wr
 rtr2#
 ```
 
-## 3. Verification
+## 5. Verification
 
 * From `rtr1`
 
@@ -240,27 +240,18 @@ Congratulation ! You have just run your first `RARE/freeRtr` within `containerla
 
 If you find an interoperability issue with `RARE/freeRtr`, please do contact us so we can adjust our software !
   
-## 4. This is just the beginning -> Next step
+## 6. Final words
   
 `freeRtr-containerlab` is a continuous work-in-progress and EXCITING project. 
-  
-We are pretty conscious of missing points:
 
-  * ~~CI/CD of `RARE/freeRtr` freeRtr-container lab creation~~ :arrow_right: `DONE !`
-  
-  `i.e` `freertr-containerlab:latest` is re-generated very day with latest greated [RARE/freeRtr](https://github.com/rare-freertr/freeRtr) control plane software
-  
-  * ~~Integration of management port to `RARE/freeRtr` containerlab~~ :arrow_right: `DONE !`
-  
-  `i.e` `freeRtr-containerlab:latest` can be accessed either using `docker exec` or containerlab `oob` management address with `telnet`. (see above)
-  
-  
+freeRtr containerlab image is nightly updated using reflecting latest greates [freeRtr/main](https://github.com/rare-freertr) branch.
+
 Feel free to join us if you feel ready to dive into the code and gets your hand dirty. 
   
 Enjoy your `RARE/freeRtr` experience with `containerlab` !
   
   
-## 5. Acknowledgement
+## 7. Acknowledgement
   
 Special thanks to:
   * [containerlab](https://containerlab.dev/)  
