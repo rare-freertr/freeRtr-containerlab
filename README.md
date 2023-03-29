@@ -15,6 +15,7 @@ We are cheating a bit here ! :-)
 ```
 git clone https://github.com/rare-freertr/freeRtr-containerlab.git
 cd freeRtr-containerlab
+containerlab deploy --topo rtr00.clab.yml 
 ```
 
 ## 2. Build container
