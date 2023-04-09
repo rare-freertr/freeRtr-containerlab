@@ -15,7 +15,7 @@ We are cheating a bit here ! :-)
 ```
 git clone https://github.com/rare-freertr/freeRtr-containerlab.git
 cd freeRtr-containerlab
-containerlab deploy --topo rtr00.clab.yml 
+containerlab deploy --topo rtr000.clab.yml 
 ```
 
 ## 2. Build container
@@ -32,7 +32,7 @@ docker build --no-cache -t freertr-containerlab:latest .
 
 * Lab diagram
 
-The lab definition file is `rtr00.clab.yml`
+The lab definition file is `rtr000.clab.yml`
 ```
 rtr1 <--eth1--> rtr2
 ``` 
@@ -41,12 +41,12 @@ rtr1 <--eth1--> rtr2
 Which format is clab-`lab-name`/`node-name`/run
 
 ```
-mkdir -p clab-rtr00/rtr1/run
-mkdir -p clab-rtr00/rtr2/run
+mkdir -p clab-rtr000/rtr1/run
+mkdir -p clab-rtr000/rtr2/run
 ```
 * Run `containerlab` with the generated image and **containerlab** lab example
 ```
-containerlab deploy --topo rtr00.clab.yml 
+containerlab deploy --topo rtr000.clab.yml 
 ```
 ## 4. Lab configuration
 
@@ -54,10 +54,10 @@ As a `Hello-world` example, we will configure the interconnectivity between `rtr
 
 Containerlab should display the output below:
 ```
-~/# containerlab deploy --topo rtr00.clab.yml
+~/# containerlab deploy --topo rtr000.clab.yml
 INFO[0000] Containerlab v0.37.0 started
-INFO[0000] Parsing & checking topology file: rtr00.clab.yml
-INFO[0000] Creating lab directory: /root/clab-test/clab-rtr00
+INFO[0000] Parsing & checking topology file: rtr000.clab.yml
+INFO[0000] Creating lab directory: /root/clab-test/clab-rtr000
 INFO[0000] Creating docker network: Name="clab", IPv4Subnet="172.20.20.0/24", IPv6Subnet="2001:172:20:20::/64", MTU="1500"
 INFO[0000] Creating container: "rtr2"
 INFO[0000] Creating container: "rtr1"
@@ -66,8 +66,8 @@ INFO[0002] Adding containerlab host entries to /etc/hosts file
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
 | # |      Name       | Container ID |    Image     | Kind  |  State  |  IPv4 Address  |     IPv6 Address     |
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
-| 1 | clab-rtr00-rtr1 | 244d9da2dcb6 | freertr:clab | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
-| 2 | clab-rtr00-rtr2 | c178a80f65b3 | freertr:clab | linux | running | 172.20.20.2/24 | 2001:172:20:20::2/64 |
+| 1 | clab-rtr000-rtr1 | 244d9da2dcb6 | freertr:clab | linux | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
+| 2 | clab-rtr000-rtr2 | c178a80f65b3 | freertr:clab | linux | running | 172.20.20.2/24 | 2001:172:20:20::2/64 |
 +---+-----------------+--------------+--------------+-------+---------+----------------+----------------------+
 ```
 
@@ -75,7 +75,7 @@ INFO[0002] Adding containerlab host entries to /etc/hosts file
   - Default login/password is `rare`/`rare`
   - Using Docker
 ```
-~# docker exec -it clab-rtr00-rtr1 /bin/bash
+~# docker exec -it clab-rtr000-rtr1 /bin/bash
 root@rtr1:~# telnet localhost 2323
 
 Trying ::1...
@@ -140,7 +140,7 @@ For the sake of simplicity, we will repeat the steps above for `rtr2` (sorry for
   - Default login/password is `rare`/`rare`
   - Using Docker
 ```
-~# docker exec -it clab-rtr00-rtr2 /bin/bash
+~# docker exec -it clab-rtr000-rtr2 /bin/bash
 root@rtr2:~# telnet localhost 2323
 Trying ::1...
 Connection failed: Connection refused
@@ -264,3 +264,4 @@ Special thanks to:
   Particularly [Csaba MATE](http://mc36.nop.hu/) for his `almost` :innocent: bug free code !
   
   
+
