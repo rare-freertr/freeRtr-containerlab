@@ -36,13 +36,18 @@ The lab definition file is `rtr000.clab.yml`
 ```
 rtr1 <--eth1--> rtr2
 ``` 
-* Create artefact folder for each node (e.g `rtr1` and `rtr2`)
+* Artefact folder for each node will be created during lab initialisation (e.g `rtr1` and `rtr2`)
 
 Which format is clab-`lab-name`/`node-name`/run
 
+This is where you'll find RARE/freeRtr hardware (rtr-hw.txt) and software (rtr-sw.txt) router configuration.
+
 ```
-mkdir -p clab-rtr000/rtr1/run
-mkdir -p clab-rtr000/rtr2/run
+cd freeRtr-containerlab
+# ls clab-rtr000/rtr1/run/
+conf  logs  mrt  ntfw  pcap
+# ls clab-rtr000/rtr2/run/
+conf  logs  mrt  ntfw  pcap
 ```
 * Run `containerlab` with the generated image and **containerlab** lab example
 ```
