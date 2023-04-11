@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#debug flag
+set -x
+
 TRG=/rtr
 RUN_DIR=$TRG/run
 CONF_DIR=$RUN_DIR/conf
