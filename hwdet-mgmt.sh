@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# debug flag
+set -x
+
 # freeRtr base installation
 # remove $TRG if you want to uninstall freeRtr
 # This is the only adherence of freeRtr on the filesystem
