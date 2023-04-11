@@ -11,15 +11,11 @@ TRG=/rtr
 RUN_DIR=$TRG/run
 CONF_DIR=$RUN_DIR/conf
 
-# Network interface detection during container boots
-$TRG/hwdet-init.sh
-
-# Wait network discovery to complete 
-sleep 1 
-
-# Initialise management port
-# on freeRtr rtr-hwtxt and rtr-sw.txt file 
-$TRG/hwdet-mgmt.sh
+# 1- Network interface detection during container boots
+# 2- Wait network discovery to complete
+# 3- Initialise management port
+#    on freeRtr rtr-hwtxt and rtr-sw.txt file 
+$TRG/hwdet-init.sh && sleep 1 && $TRG/hwdet-mgmt.sh
 
 # We are now ready to Start RARE/freeRtr
 # using hwdet-init.sh artefact results
