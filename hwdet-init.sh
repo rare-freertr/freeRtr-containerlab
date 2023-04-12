@@ -13,6 +13,14 @@ MRT_DIR=$RUN_DIR/mrt
 HW_FILE=$CONF_DIR/rtr-hw.txt
 SW_FILE=$CONF_DIR/rtr-sw.txt
 
+# wait for all node interfaces to come up
+NODE_INTFS=`ip -o link show | grep eth | grep -v eth0 | wc -l`
+while (( $NODE_INTFS != $CLAB_INTFS ))  
+do
+  sleep 1
+  NODE_INTFS=`ip -o link show | grep eth | grep -v eth0 | wc -l`
+done
+
 if [ ! -d "$CONF_DIR" ] ; then
   echo "Creating freeRtr run/* folders"
   mkdir -p $CONF_DIR $LOGS_DIR $PCAP_DIR $NTFW_DIR $MRT_DIR
@@ -40,14 +48,6 @@ if [ -f "$CONF_DIR/hwdet-main.sh" ] ; then
   mv $CONF_DIR/hwdet-main.sh $CONF_DIR/hwdet-main.sh.bak
 fi
 
-
-# wait for all node interfaces to come up
-NODE_INTFS=`ls -A /sys/class/net | grep eth | grep -v eth0 | wc -l`
-while [($NODE_INTF) < ($CLAB_INTFS)]
-do
-  sleep 1
-  NODE_INTFS=`ls -A /sys/class/net | grep eth | grep -v eth0 | wc -l`
-done
 
 # then trigger interfaces discovery
 java -jar $TRG/rtr.jar test hwdet path $CONF_DIR/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0/gre0/erspan0/gretap0/ip6tnl0 mem 1024m tcpvrf 2323 OOB 23
