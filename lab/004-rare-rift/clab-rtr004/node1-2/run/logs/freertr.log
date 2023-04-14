@@ -1,0 +1,164 @@
+2023-04-12 13:36:20 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-12 15:36:22 info cfgInit.executeSWcommands:cfgInit.java:768 line 59: "do write" : % saving configuration  % success  
+2023-04-12 15:36:22 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "do write" : % saving configuration  % success  
+2023-04-12 15:36:22 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2023-04-12 15:36:22 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-12 15:40:23 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:40:55 info userReader.cmdEnter:userReader.java:1141 command node1-2#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:40:55 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#scheduler errors  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-sched)#time 600000  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-sched)#delay 30000  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-sched)#command clear errors gp4l-err@lists.geant.org  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-sched)#start  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-sched)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#vrf definition DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:11 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#router rift4 1  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#vrf DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#router-id 42  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#level 1  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#redistribute connected  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#router rift6 1  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#vrf DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#router-id 62  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#level 1  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#redistribute connected  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#interface loopback0  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv4 address 1.1.1.12 255.255.255.255  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv6 address fd00::1:1:1:12 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:28 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:31 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:31 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:32 info userReader.cmdEnter:userReader.java:1141 command node1-2#write  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:33 info userReader.cmdEnter:userReader.java:1141 command node1-2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:33 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:41:34 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 54594
+2023-04-12 15:59:48 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 15:59:53 info userReader.cmdEnter:userReader.java:1141 command node1-2#show running-config net  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:33 info userReader.cmdEnter:userReader.java:1141 command node1-2#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:33 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#interface ethernet1  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv4 address 10.12.21.12 255.255.255.0  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv6 address fd00::a:c:15:c ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#router rift4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#router rift6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#interface ethernet2  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv4 address 10.12.22.12 255.255.255.0  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#ipv6 address fd00::a:c:16:c ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#router rift4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#router rift6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:36 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:37 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (10.12.21.21) up
+2023-04-12 16:00:37 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-12 16:00:37 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet2 (10.12.21.21) down
+2023-04-12 16:00:37 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:37 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet2 (fd00::a:c:15:15) down
+2023-04-12 16:00:37 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (10.12.22.22) up
+2023-04-12 16:00:37 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (fd00::a:c:16:16) up
+2023-04-12 16:00:37 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet2 (10.12.22.22) down
+2023-04-12 16:00:37 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet2 (fd00::a:c:16:16) down
+2023-04-12 16:00:38 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (10.12.21.21) up
+2023-04-12 16:00:38 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-12 16:00:38 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (10.12.22.22) up
+2023-04-12 16:00:38 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (fd00::a:c:16:16) up
+2023-04-12 16:00:39 info userReader.cmdEnter:userReader.java:1141 command node1-2(cfg)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:39 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:39 info userReader.cmdEnter:userReader.java:1141 command node1-2#write  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:43 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:44 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:44 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:46 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:47 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:48 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:49 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:50 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:51 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:52 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:52 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:53 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:54 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:54 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:55 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:56 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:57 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:58 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:00:59 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:00 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:01 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:02 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:02 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:03 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:04 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:05 info userReader.cmdEnter:userReader.java:1141 command node1-2#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:12 info userReader.cmdEnter:userReader.java:1141 command node1-2#write  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:14 info userReader.cmdEnter:userReader.java:1141 command node1-2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:14 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:01:15 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 50288
+2023-04-12 16:22:42 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 58838
+2023-04-12 16:22:43 info userReader.cmdEnter:userReader.java:1141 command node1-2#write  from telnet ethernet255 23 -> 2001:172:20:20::1 58838
+2023-04-12 16:22:45 info userReader.cmdEnter:userReader.java:1141 command node1-2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 58838
+2023-04-12 16:22:45 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 58838
+2023-04-12 16:22:46 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 58838
+2023-04-12 16:30:54 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 59954
+2023-04-12 16:30:59 info userReader.cmdEnter:userReader.java:1141 command node1-2#show ipv4 route DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 59954
+2023-04-12 16:31:07 info userReader.cmdEnter:userReader.java:1141 command node1-2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 59954
+2023-04-12 16:31:07 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 59954
+2023-04-12 16:31:08 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 59954
+2023-04-14 07:33:56 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 07:33:57 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 07:33:57 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 07:33:58 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 09:33:58 info cfgInit.executeSWcommands:cfgInit.java:768 line 150: "do write" : % saving configuration  % success  
+2023-04-14 09:33:58 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-14 09:33:58 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 09:34:00 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 09:34:00 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-14 09:34:00 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (10.12.22.22) up
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (fd00::a:c:16:16) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (10.12.21.21) up
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet2 (fd00::a:c:15:15) down
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet2 (10.12.22.22) down
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet2 (fd00::a:c:16:16) down
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (10.12.22.22) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (fd00::a:c:16:16) up
+2023-04-14 17:21:15 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 17:21:16 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 17:21:16 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 17:21:17 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 19:21:17 info cfgInit.executeSWcommands:cfgInit.java:768 line 150: "do write" : % saving configuration  % success  
+2023-04-14 19:21:17 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-14 19:21:17 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 19:21:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 19:21:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-14 19:21:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 19:21:20 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (10.12.21.21) up
+2023-04-14 19:21:20 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-14 19:21:21 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet2 (10.12.21.21) down
+2023-04-14 19:21:21 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet2 (fd00::a:c:15:15) down
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (10.12.21.21) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet2 (fd00::a:c:15:15) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (10.12.22.22) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet2 (fd00::a:c:16:16) up

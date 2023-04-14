@@ -1,0 +1,111 @@
+2023-04-14 17:14:29 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 17:14:29 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 17:14:29 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 17:14:30 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 19:14:30 info cfgInit.executeSWcommands:cfgInit.java:768 line 59: "do write" : % saving configuration  % success  
+2023-04-14 19:14:30 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "do write" : % saving configuration  % success  
+2023-04-14 19:14:30 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2023-04-14 19:14:30 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 19:14:32 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 19:14:32 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 19:17:07 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:10 info userReader.cmdEnter:userReader.java:1141 command rtr1#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:10 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#vrf definition CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#vrf definition OOB  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#router ospf4 1  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#vrf CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#router-id 2.2.2.2  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#traffeng-id 0.0.0.0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#area 0 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#router ospf6 1  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#vrf CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#router-id 2.2.2.2  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#traffeng-id ::  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#area 0 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#interface loopback0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#vrf forwarding CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv4 address 2.2.2.2 255.255.255.255  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 address fd00::2:2:2:2 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf4 1 area 0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf4 1 passive  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf6 1 area 0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf6 1 passive  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#interface ethernet1  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#vrf forwarding CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv4 address 192.168.0.1 255.255.255.254  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:13 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 address 2002::c0a8:1 ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf4 1 area 0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#router ospf6 1 area 0  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:14 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:15 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:15 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:16 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:17 warning rtrOspf4neigh.doRetXchg:rtrOspf4neigh.java:880 neighbor area0 192.168.0.0 up
+2023-04-14 19:17:22 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:17:23 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv4 ospf 1 interface  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:28 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv4 ospf 1 neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:32 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:17:33 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv6 ospf 1 interface  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:36 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv4 ospf 1 interface  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:42 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:17:43 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv6 ospf 1 interface  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:45 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:47 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:47 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:48 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 45516
+2023-04-14 19:17:52 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:02 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:12 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:15 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:21 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv4 route CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:22 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:26 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:28 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:28 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:29 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 33896
+2023-04-14 19:18:32 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:37 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:18:40 info userReader.cmdEnter:userReader.java:1141 command rtr1#show running-config  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:18:42 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:18:52 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:02 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:08 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:11 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:12 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:16 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:18 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:22 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:24 info userReader.cmdEnter:userReader.java:1141 command rtr1#ping 2002::c0a8:0  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:27 info userReader.cmdEnter:userReader.java:1141 command rtr1#ping 2002::c0a8:0 vrf CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:32 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:41 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv4 arp eth1  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:19:42 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:19:52 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:20:01 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv6 neighbors ethernet1  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:02 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:20:12 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:20:16 info userReader.cmdEnter:userReader.java:1141 command rtr1#show ipv6 ospf 1 interface  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:18 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:20 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:20 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:20 info prtTcp.connectionRcvd:prtTcp.java:964 got data while not open telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:20 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 49264
+2023-04-14 19:20:22 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:20:32 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1
+2023-04-14 19:20:42 info rtrOspf6iface.recvPack:rtrOspf6iface.java:1263 got from out of subnet peer fe80::1889:1ff:feff:1

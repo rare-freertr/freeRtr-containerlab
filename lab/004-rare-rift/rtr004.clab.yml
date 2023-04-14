@@ -1,0 +1,75 @@
+name: rtr004
+prefix: null
+mgmt: {}
+topology:
+  kinds:
+    rare:
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest 
+  nodes:
+    node1-1:
+      kind: rare
+      group: tier-1
+#      startup-delay: 5
+    node1-2:
+      kind: rare
+      group: tier-1
+      wait-for:
+        - node1-1
+    node1-3:
+      kind: rare
+      group: tier-1
+      wait-for:
+        - node1-2
+    node1-4:
+      kind: rare
+      group: tier-1
+      wait-for:
+        - node1-3
+    node2-1:
+      kind: rare
+      group: tier-2
+      wait-for:
+        - node1-4
+    node2-2:
+      kind: rare
+      group: tier-2
+      wait-for:
+        - node2-1
+    node3-1:
+      kind: rare
+      group: tier-3
+      wait-for:
+        - node2-2
+  links:
+  - endpoints:
+    - node1-1:eth1
+    - node2-1:eth1
+  - endpoints:
+    - node1-1:eth2
+    - node2-2:eth1
+  - endpoints:
+    - node1-2:eth1
+    - node2-1:eth2
+  - endpoints:
+    - node1-2:eth2
+    - node2-2:eth2
+  - endpoints:
+    - node1-3:eth1
+    - node2-1:eth3
+  - endpoints:
+    - node1-3:eth2
+    - node2-2:eth3
+  - endpoints:
+    - node1-4:eth1
+    - node2-1:eth4
+  - endpoints:
+    - node1-4:eth2
+    - node2-2:eth4
+  - endpoints:
+    - node2-1:eth5
+    - node3-1:eth1
+  - endpoints:
+    - node2-2:eth5
+    - node3-1:eth2
+debug: false
+

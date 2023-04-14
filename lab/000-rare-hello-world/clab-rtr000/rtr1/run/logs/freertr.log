@@ -1,0 +1,37 @@
+2023-04-14 16:33:49 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 16:33:49 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 16:33:49 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 16:33:50 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 18:33:50 info cfgInit.executeSWcommands:cfgInit.java:768 line 59: "do write" : % saving configuration  % success  
+2023-04-14 18:33:51 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "do write" : % saving configuration  % success  
+2023-04-14 18:33:51 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2023-04-14 18:33:51 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 18:33:52 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 18:33:52 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 18:34:14 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:16 info userReader.cmdEnter:userReader.java:1141 command rtr1#show running-config  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:22 info userReader.cmdEnter:userReader.java:1141 command rtr1#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:22 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:27 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#interface eth1  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:31 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:33 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#vrf definition CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:41 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:44 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#interface eth1  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:34:52 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#vrf forwarding CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:05 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv4 address 10.1.2.1 /24  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:21 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 address fd00:a:1:2:1 /120  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:26 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 address fd00::a:1:2:1 /120  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:32 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:33 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:33 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:34 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:35 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:35 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:35:36 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 53070
+2023-04-14 18:37:34 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-14 18:37:40 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-14 18:37:44 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-14 18:37:45 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-14 18:37:45 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-14 18:37:46 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 60412

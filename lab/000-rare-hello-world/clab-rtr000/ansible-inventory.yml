@@ -1,0 +1,8 @@
+all:
+  children:
+    rare:
+      hosts:
+        clab-rtr000-rtr1:
+          ansible_host: 172.20.20.3
+        clab-rtr000-rtr2:
+          ansible_host: 172.20.20.2

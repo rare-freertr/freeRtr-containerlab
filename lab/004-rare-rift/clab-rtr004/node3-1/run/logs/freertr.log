@@ -1,0 +1,299 @@
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-12 13:36:21 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-12 13:36:22 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-12 15:36:23 info cfgInit.executeSWcommands:cfgInit.java:768 line 59: "do write" : % saving configuration  % success  
+2023-04-12 15:36:23 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "do write" : % saving configuration  % success  
+2023-04-12 15:36:23 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2023-04-12 15:36:23 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-12 15:36:24 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-12 15:48:26 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:28 info userReader.cmdEnter:userReader.java:1141 command node3-1#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:28 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#scheduler errors  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-sched)#time 600000  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-sched)#delay 30000  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-sched)#command clear errors gp4l-err@lists.geant.org  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-sched)#start  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-sched)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#vrf definition DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:37 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#router rift4 1  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#vrf DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#router-id 47  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#level 3  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#redistribute connected  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#router rift6 1  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#vrf DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#router-id 67  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#level 3  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#redistribute connected  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-rtr)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#interface loopback0  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv4 address 3.3.3.31 255.255.255.255  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv6 address fd00::3:3:3:31 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#interface ethernet1  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv4 address 10.21.31.31 255.255.255.0  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv6 address fd00::a:15:1f:1f ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#router rift4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#router rift6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#interface ethernet2  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#vrf forwarding DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv4 address 10.22.31.31 255.255.255.0  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#ipv6 address fd00::a:16:1f:1f ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#router rift4 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#router rift6 1 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no shutdown  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#no log-link-change  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:48:58 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg-if)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:19 info userReader.cmdEnter:userReader.java:1141 command node3-1(cfg)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:19 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:20 info userReader.cmdEnter:userReader.java:1141 command node3-1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:22 info userReader.cmdEnter:userReader.java:1141 command node3-1#show running-config  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:34 info userReader.cmdEnter:userReader.java:1141 command node3-1#show ipv4 route DC_CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:43 info userReader.cmdEnter:userReader.java:1141 command node3-1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:45 info userReader.cmdEnter:userReader.java:1141 command node3-1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:45 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 15:49:46 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 52322
+2023-04-12 16:07:35 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:35 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:36 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:36 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:37 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:37 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:38 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:38 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:39 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:39 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:40 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:40 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:41 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:41 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:42 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:42 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:43 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:43 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:44 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:44 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:45 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:45 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:46 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:46 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:47 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:47 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:48 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:48 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:49 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:49 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:50 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:50 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:51 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:51 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:52 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:52 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:53 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:53 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:54 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:54 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:55 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:55 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:56 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:56 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:57 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:57 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:58 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:58 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:07:59 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:07:59 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:00 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:00 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:01 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:01 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:02 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:02 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:03 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:03 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:04 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:04 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:05 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:05 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:06 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:06 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:07 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:07 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:08 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:08 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:09 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:09 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:10 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:10 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:11 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:11 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:12 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:12 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:13 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:13 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:14 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:14 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:15 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:15 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:16 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:16 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:17 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:17 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:18 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:18 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:19 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:19 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:20 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:20 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:21 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:21 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:22 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:22 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:23 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:23 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:24 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:24 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:25 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:25 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:26 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:26 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:27 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:27 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:28 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:28 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:29 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:29 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:30 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:30 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:31 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:31 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:32 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:32 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:33 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:33 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:34 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:34 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:35 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:35 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:36 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:36 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:37 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:37 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:38 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:38 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:39 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:39 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:40 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:40 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:41 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:41 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:42 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:42 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:43 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:43 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:44 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:44 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:45 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:45 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:46 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:46 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:47 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:47 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:48 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:48 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:49 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:49 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:50 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:50 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:51 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:51 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:52 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:52 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:53 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:53 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:54 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:54 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:55 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:55 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:56 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:56 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:57 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> fd00::a:e:15:15 914
+2023-04-12 16:08:57 info rtrRiftIface.datagramRecv:rtrRiftIface.java:771 got from out of subnet peer rift ethernet1 914 -> 10.15.21.21 914
+2023-04-12 16:08:58 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (fd00::a:15:1f:15) up
+2023-04-12 16:08:58 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (10.21.31.21) up
+2023-04-12 16:13:55 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:01 info userReader.cmdEnter:userReader.java:1141 command node3-1#show running-config net  from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:28 info userReader.cmdEnter:userReader.java:1141 command node3-1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:38 info userReader.cmdEnter:userReader.java:1141 command node3-1#show running-config net  from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:49 info userReader.cmdEnter:userReader.java:1141 command node3-1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:49 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:14:50 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 53228
+2023-04-12 16:17:06 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:09 info userReader.cmdEnter:userReader.java:1141 command node3-1#show running-config net  from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:23 info userReader.cmdEnter:userReader.java:1141 command node3-1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:29 info userReader.cmdEnter:userReader.java:1141 command node3-1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:30 info userReader.cmdEnter:userReader.java:1141 command node3-1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:30 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:17:31 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 40516
+2023-04-12 16:18:06 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (10.22.31.22) up
+2023-04-12 16:18:06 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) up
+2023-04-12 16:21:58 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 60614
+2023-04-12 16:22:00 info userReader.cmdEnter:userReader.java:1141 command node3-1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 60614
+2023-04-12 16:22:01 info userReader.cmdEnter:userReader.java:1141 command node3-1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 60614
+2023-04-12 16:22:01 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 60614
+2023-04-12 16:22:02 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 60614
+2023-04-14 07:33:57 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 07:33:58 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 07:33:58 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 07:33:58 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 09:33:59 info cfgInit.executeSWcommands:cfgInit.java:768 line 150: "do write" : % saving configuration  % success  
+2023-04-14 09:33:59 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-14 09:33:59 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 09:34:01 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 09:34:01 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-14 09:34:01 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (10.21.31.21) up
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (fd00::a:15:1f:15) up
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (10.22.31.22) up
+2023-04-14 09:34:01 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) up
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet5 (fd00::a:15:1f:15) down
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-1:ethernet5 (10.21.31.21) down
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet5 (10.22.31.22) down
+2023-04-14 09:34:02 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) down
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (10.21.31.21) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (fd00::a:15:1f:15) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (10.22.31.22) up
+2023-04-14 09:34:02 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) up
+2023-04-14 17:21:17 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 17:21:17 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 17:21:17 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 17:21:18 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 19:21:18 info cfgInit.executeSWcommands:cfgInit.java:768 line 150: "do write" : % saving configuration  % success  
+2023-04-14 19:21:18 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-14 19:21:18 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 19:21:20 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 19:21:20 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2023-04-14 19:21:20 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 19:21:20 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (10.22.31.22) up
+2023-04-14 19:21:20 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (10.21.31.21) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-1:ethernet5 (fd00::a:15:1f:15) up
+2023-04-14 19:21:21 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet5 (10.22.31.22) down
+2023-04-14 19:21:21 error rtrRiftIface.run:rtrRiftIface.java:1018 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) down
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (10.22.31.22) up
+2023-04-14 19:21:21 warning rtrRiftIface.datagramRecv:rtrRiftIface.java:854 neighbor node2-2:ethernet5 (fd00::a:16:1f:16) up

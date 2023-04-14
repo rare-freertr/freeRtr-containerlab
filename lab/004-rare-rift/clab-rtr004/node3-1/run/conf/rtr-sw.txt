@@ -1,0 +1,143 @@
+hostname node3-1
+buggy
+!
+logging buffered debug 10240
+logging file debug /rtr/run/logs/freertr.log
+logging rotate 655360000 /rtr/run/logs/freertr.old
+!
+crypto rsakey rsa import $v10$TUlJRW9RSUJBQUtDQVFCVXllZlFNVVd5Wkh4bjcwVTJHcVl3ZnVJb3Fjb2Fob0FlOHl1Q1JmU21zRGo3Y3BYaTEyOTd0K3AyQkdNbGJ3V2lkVlJ4R0FqUngvUk1DTVFmd0dhU081dk94NTBwbldwU2JLcGh5RVdDcmo4OVFodmRrZWhacmJjeGFDa3VQRnRQb3pIYktTKzVBUUZDUlpFdUxudkowYUxlRURNSEcxLytRREY5dEVvdnMyWU94Snk2YnJ4WnNOZnlMSWhuLzBVTnZ1SWlFUGs3TGE1azhhR2NYcHVUZlM0MFEzQU1HOG5XeFdHd2pmWU5NekpIczFqZ2dUUThwZ2RqMDZmSmJyYTlMRW9IdzZzMFhxNXlhcTNUakhNZENaak53eEs3S0FSMWY3QTJueGRkbjlWN1A3K3dOdkJENENCVzBWcDhsMlVzSnRGQjljUzNLV2JWdjFhUVBFTWJBZ01CQUFFQ2dnRUFTTEtBeHBtb2Q0Yit2NktBUmg1ZFJaRlUyYWFTZVdHKzhrcHVrSmpvWmc4TUhGT252Y0lYZlEwNHd3Mko4S3ViT2lxOVJ1WmprWEtPdks1N2Nmbm1PQlZSeHQ2Um12KzBESTNOSEYrNWNZMXkvVlAwVG1wdXZJMWNWOGxHSGJWMFdQakVvM05SenA3VTlIeHZPUmh6M0p1WXVDdE5oUmRzbTdOd2U2WWNRWDdqOVFQdVJmU29udjZxSnpwcE5lRkxPREVaVEFtUFpSWEdYZEVFTk5WVHdsdXZHVFZQSmZobGxaNlJKSDcraEkwaSsvYmZSWjVHdTl1S0d6RTVKOWYwOEdxTktRUUlUVm1BYjc5Q2h5K2s1NzB1SlBodUthMENwZDErejlTdnBacld5SDBwM2ZndWs5Q2htWlRKdDg1d3NnOHhMN05YVCs5VHhXM1RCTWxnVVFLQmdRQ1plT2puZE5MZTRlZklBRVRPVG5tMGZodFMyNUlsYVlITm9BQWsvSFJQL0tYNjRadlNieWc4TWtrUFFTS2dabFk1d0QrVkNKQTRUSW4zajRwMytZNk5iMmtTaUJ3TXdCNUJBNURSMEJEV0V6U2ZsR2MweEM1SUZZU2JlV3ErdlNDbDduaWVFalFTaDZJQkRXRG4zRmo2eEpUMDhybm1vWEU1Q1BERGxoL3NHUUtCZ1FDTmJwd1k4amtEYWwzejRHaHljcWowVXVGTzF6N3NycUJ3ejJnTWwycUNURHM2UG1ibTlpNDR0UDJ0c0gyTWlMeVVuMThNWGRLaGxiemN0RXI5UTV6cHNDd1BFUzJZM0w4WFh3SExpKzBwL0oxcVBKMGJWaThJb2NrUU9RTlliZ0dZcUVneGlPOTRJQldEZ0hhcEh1eVZ3K2VOR3hreFRTemx5QmtWYXg5UFV3S0JnQVRQVzAxVnhmNGlTbWRrU3NQRWhkLzRTOWJ1OXNlaFpPWVM2NjQ5RTFBbWRQVkYrT0pCaFp0TllDalFPOHVYS1lDcDI5Uko3bXMxU3VXdFpBT2FtTE1xR0xyeDlSOFpMbG1QU1F5cVhyeTI0V0ZXLzEwU0FQbFZZMUNVSDVwV3h4MHNPaStLRm9PMktJZXI2YXVhcGxkRnJmMTNWZ2c2YXhnRWhiYzdqMGlSQW9HQVAxdXd4Q0FtMkZmYk5QaHY4ZTFac1BJOEN1UzBSTFZLSEo5ZGZsNktrVXB6TWZsb2dja0JGZGhHMkh0N0V1emloallMRDNBc2ZzU2tzYjUyNVpSWGcveXZFQ1RpNTFya3BDU2ttam5hQ2ZnbjBNTE1vc1Z1RnBEYmtNL3Bwc0RKS0VraTVrWHcrVUJ1UXRYVzBwYU81OXkySzJsYlZORzg3a2RBclc2cXZROENnWUFEejZydFVpcWxuWDNJVGdMVE5XbjlYeWVSN2dDRGZuY3Y3Wng4SDZlZTFGZm1qSGJycExlNHpKcnZFQnN1dXJRVVFTd1FnNjkva2E5dEtuRGx4d21JTFpTYkpOdmpocHovU0lzTm9PZWVRVG9hUWZMcFRFYUQrK1lzcTMzOU5Ka2d0WUcwTXp6WDBpMHhKL2RVNkdESEhxMm0zcEwvUVJlRElad3V2Q1dCQ1E9PQ==
+!
+crypto dsakey dsa import $v10$TUlJQnZBSUJBQUtCZ1FERkhBaWNpUTZrSmtkVXlYK2Y5YVdkcm5PZ3BBcnBzSXAwWTlBQjJDNDBINy9WVno3S3dFR25kZVlXRnJHSis4TnNUemVRY3pzS1orNDcvaHJQT2d1Q0xXOUdmMmZiQmxqcTdQVkxxMXJGR3RtTUFTODR3Q2Y3bVJVa1M1YXlXYkpobk5pL0JGaHdNUXNQMlhoc25vRWdzSlJxRUxKWUxTY0YvdS9WRFhkVHp3SVZBT0haMFhqQnRBajdOTmRQaEJnVVQyT3BnV3JSQW9HQWJBamFvaStvdENlNnQ5QlU4Z0NJMDBQR2RnNHNhM0NkM3BzSUhwYXVWMGdsWk8rVlFEZUd1bDVHdklOUUFaOFZ6RnkyVVdjNWlpUngzRXJFcnMrMlp3NVp3VzhxeDg5WEZoWEJVbTMxR1VpSGU5eTBBQlJZdC8wVS9tbUlQV0tDamhYb04zdGhGTXlUUEFxUHJaL3VmYVhid3lFMUxrcFVzQ3p0NHhaN01jVUNnWUVBdEJ5U2pqMHdpQ2kySEVwQW1KVk1FcEdOcm52UTVaVk5KNUg0UEFybXJOSGk5ZUo2ZlhDaFZtM0l6Q25kNVFmdHpENW5VRVBkQTlZTXROOXptWEUyUWR0ekY2ZGFqL09zK3YvU25kbDBLOUNqOS9EcUt5QXNDM3FGc1FCZDdPRGZqLzB6NThKcXhZemcyVVJNVnRjV2Z1U0toNHo0eHVUNFhTNEJRWUFnenNzQ0ZRRGVCQ2xhaGpiaEdxWlpDazBhMTRMWFBhSmZDZz09
+!
+crypto ecdsakey ecdsa import $v10$TUhRQ0FRRUVJQUQxeExnWlpWRmNSRWlNTEdiazZkRTVabVNPMEhtaDgvVnNMVHFJbnZiZ29BY0dCU3VCQkFBS29VUURRZ0FFcUJVMnNVTHZZY3pVVkZ1Y1BjL21TaFpSWkZCZUNRTVdRNVp1c0FjOGpMendpM1pPcUczOWw0YVhia0lhS29MUTAvRnhOTmJ2K0N1UjNvZ3lZN0NuU0E9PQ==
+!
+aaa userlist usr
+ username rare
+ username rare password $v10$cmFyZQ==
+ exit
+!
+scheduler errors
+ time 600000
+ delay 30000
+ command clear errors gp4l-err@lists.geant.org
+ start
+ exit
+!
+prefix-list ALL4
+ sequence 10 permit 0.0.0.0/0 ge 0 le 0
+ exit
+!
+prefix-list ALL6
+ sequence 10 permit ::/0 ge 0 le 0
+ exit
+!
+vrf definition DC_CORE
+ exit
+!
+vrf definition OOB
+ exit
+!
+router rift4 1
+ vrf DC_CORE
+ router-id 47
+ level 3
+ redistribute connected
+ exit
+!
+router rift6 1
+ vrf DC_CORE
+ router-id 67
+ level 3
+ redistribute connected
+ exit
+!
+interface loopback0
+ vrf forwarding DC_CORE
+ ipv4 address 3.3.3.31 255.255.255.255
+ ipv6 address fd00::3:3:3:31 ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet1
+ lldp enable
+ vrf forwarding DC_CORE
+ ipv4 address 10.21.31.31 255.255.255.0
+ ipv6 address fd00::a:15:1f:1f ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00
+ router rift4 1 enable
+ router rift6 1 enable
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet2
+ lldp enable
+ vrf forwarding DC_CORE
+ ipv4 address 10.22.31.31 255.255.255.0
+ ipv6 address fd00::a:16:1f:1f ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00
+ router rift4 1 enable
+ router rift6 1 enable
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet255
+ vrf forwarding OOB
+ ipv4 address 172.20.20.8 255.255.255.0
+ ipv6 address 2001:172:20:20::8 ffff:ffff:ffff:ffff::
+ no shutdown
+ no log-link-change
+ exit
+!
+console0
+ no exec authorization
+ no login authentication
+ exit
+!
+proxy-profile OOB
+ vrf OOB
+ exit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+server telnet OOB
+ security protocol telnet
+ security authentication usr
+ exec logging
+ no exec authorization
+ login authentication usr
+ login logging
+ vrf OOB
+ exit
+!
+client proxy OOB
+client capture-path /rtr/run/pcap/
+client name-server 1.1.1.1
+client time-server europe.pool.ntp.org
+client time-zone CET
+!
+end

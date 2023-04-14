@@ -1,0 +1,91 @@
+{
+  "name": "rtr002",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-3a178267626f",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "rtr1": {
+      "index": "0",
+      "shortname": "rtr1",
+      "longname": "clab-rtr002-rtr1",
+      "fqdn": "rtr1.rtr002.io",
+      "group": "",
+      "labdir": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/clab-rtr002/rtr1",
+      "kind": "rare",
+      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3a178267626f",
+        "clab-node-group": "",
+        "clab-node-kind": "rare",
+        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/clab-rtr002/rtr1",
+        "clab-node-name": "rtr1",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/rtr002.clab.yml",
+        "containerlab": "rtr002"
+      }
+    },
+    "srl1": {
+      "index": "1",
+      "shortname": "srl1",
+      "longname": "clab-rtr002-srl1",
+      "fqdn": "srl1.rtr002.io",
+      "group": "",
+      "labdir": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/clab-rtr002/srl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3a178267626f",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/clab-rtr002/srl1",
+        "clab-node-name": "srl1",
+        "clab-node-type": "ixrd2",
+        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/002-hello-srl-interconnect/rtr002.clab.yml",
+        "containerlab": "rtr002"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:d5:c0:9f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtr1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:6d:0c:b6",
+        "peer": "a"
+      }
+    }
+  ]
+}

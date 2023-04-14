@@ -1,0 +1,32 @@
+2023-04-14 16:56:41 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-14 16:56:41 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-14 16:56:42 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-14 16:56:42 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-14 18:56:43 info cfgInit.executeSWcommands:cfgInit.java:768 line 59: "do write" : % saving configuration  % success  
+2023-04-14 18:56:43 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "do write" : % saving configuration  % success  
+2023-04-14 18:56:43 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2023-04-14 18:56:43 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-14 18:56:44 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-14 18:56:45 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-14 18:57:50 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:57:53 info userReader.cmdEnter:userReader.java:1141 command rtr1#configure terminal  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:57:53 warning userLineHandler.doExec:userLine.java:890 rare configuring from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:57:54 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#vrf definition CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:57:54 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-vrf)#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg)#interface ethernet1  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#lldp enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#vrf forwarding CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv4 address 192.168.0.1 255.255.255.254  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:39 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 address 2002::c0a8:1 ffff:ffff:ffff:ffff:ffff:ffff:ffff:fffe  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:42 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#ipv6 enable  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:45 info userReader.cmdEnter:userReader.java:1141 command rtr1(cfg-if)#end  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:45 warning userLineHandler.doExec:userLine.java:922 rare configured from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:46 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:58:49 info userReader.cmdEnter:userReader.java:1141 command rtr1#show lldp neighbor  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:01 info userReader.cmdEnter:userReader.java:1141 command rtr1#ping 192.168.0.0 vrf CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:12 info userReader.cmdEnter:userReader.java:1141 command rtr1#ping 2002::c0a8:0 vrf CORE  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:25 info userReader.cmdEnter:userReader.java:1141 command rtr1#show running-config  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:32 info userReader.cmdEnter:userReader.java:1141 command rtr1#write  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:34 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:34 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 45144
+2023-04-14 18:59:35 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 45144
