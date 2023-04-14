@@ -1,0 +1,13 @@
+name: rtr001
+
+topology:
+  nodes:
+    srl1:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+      startup-config: srl1.cfg
+    rtr1:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest 
+  links:
+    - endpoints: ["srl1:e1-1","rtr1:eth1"]
