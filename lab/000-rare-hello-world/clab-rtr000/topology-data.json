@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-cfcb092c2f54",
+        "bridge": "br-aa094aeab0a2",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "2001:172:20:20::/64",
@@ -34,7 +34,7 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-cfcb092c2f54",
+        "clab-mgmt-net-bridge": "br-aa094aeab0a2",
         "clab-node-group": "",
         "clab-node-kind": "rare",
         "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/000-rare-hello-world/clab-rtr000/rtr1",
@@ -61,7 +61,7 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-cfcb092c2f54",
+        "clab-mgmt-net-bridge": "br-aa094aeab0a2",
         "clab-node-group": "",
         "clab-node-kind": "rare",
         "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/000-rare-hello-world/clab-rtr000/rtr2",
@@ -77,13 +77,13 @@
       "a": {
         "node": "rtr1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:4f:53:f3",
+        "mac": "aa:c1:ab:e8:93:5f",
         "peer": "z"
       },
       "z": {
         "node": "rtr2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:03:01:c7",
+        "mac": "aa:c1:ab:63:7a:96",
         "peer": "a"
       }
     }

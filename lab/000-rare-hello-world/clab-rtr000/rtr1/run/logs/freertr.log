@@ -35,3 +35,12 @@
 2023-04-14 18:37:45 info userReader.cmdEnter:userReader.java:1141 command rtr1#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 60412
 2023-04-14 18:37:45 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 60412
 2023-04-14 18:37:46 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 60412
+2023-04-17 14:12:34 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-17 14:12:35 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-17 14:12:35 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-17 14:12:40 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-17 16:12:45 info cfgInit.executeSWcommands:cfgInit.java:768 line 115: "do write" : % saving configuration  % success  
+2023-04-17 16:12:45 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-17 16:12:45 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-17 16:12:46 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-17 16:12:46 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh

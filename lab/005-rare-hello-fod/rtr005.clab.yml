@@ -1,0 +1,29 @@
+name: rtr005
+
+topology:
+  nodes:
+    fod1:
+      kind: linux
+      image: ghcr.io/GEANT/fod-exabgp:latest 
+    rtr1:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest 
+    host1:
+      kind: linux
+      image: floui/tiny-net-tools:latest  
+    host2:
+      kind: linux
+      image: floui/tiny-net-tools:latest 
+  links:
+    # 10.1.10.1 /24 <-> 10.1.10.10 /24
+    - endpoints:
+      - host1:eth1
+      - rtr1:eth1
+    # 10.2.10.2 /24 <-> 10.2.10.10 /24
+    - endpoints:
+      - host2:eth1
+      - rtr1:eth2
+    # 10.3.10.3 /24 <-> 10.3.10.10 /24
+    - endpoints:
+      - fod1:eth1
+      - rtr1:eth3

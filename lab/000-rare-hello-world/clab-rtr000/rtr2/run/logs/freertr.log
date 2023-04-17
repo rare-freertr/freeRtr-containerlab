@@ -42,3 +42,18 @@
 2023-04-14 18:37:29 info userReader.cmdEnter:userReader.java:1141 command rtr2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 33498
 2023-04-14 18:37:29 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 33498
 2023-04-14 18:37:30 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 33498
+2023-04-17 14:12:32 info cfgInit.doInit:cfgInit.java:780 booting
+2023-04-17 14:12:33 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2023-04-17 14:12:34 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2023-04-17 14:12:38 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2023-04-17 16:12:44 info cfgInit.executeSWcommands:cfgInit.java:768 line 115: "do write" : % saving configuration  % success  
+2023-04-17 16:12:44 error cfgInit.doInit:cfgInit.java:998 1 errors found
+2023-04-17 16:12:44 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2023-04-17 16:12:45 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2023-04-17 16:12:46 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2023-04-17 16:14:43 info userLineHandler.doExec:userLine.java:798 rare logged in from telnet ethernet255 23 -> 2001:172:20:20::1 50200
+2023-04-17 16:14:45 info userReader.cmdEnter:userReader.java:1141 command rtr2#show running-config net1  from telnet ethernet255 23 -> 2001:172:20:20::1 50200
+2023-04-17 16:15:08 info userReader.cmdEnter:userReader.java:1141 command rtr2#exit  from telnet ethernet255 23 -> 2001:172:20:20::1 50200
+2023-04-17 16:15:08 info userLineHandler.doExec:userLine.java:880 rare logged out from telnet ethernet255 23 -> 2001:172:20:20::1 50200
+2023-04-17 16:15:08 info prtTcp.connectionRcvd:prtTcp.java:964 got data while not open telnet ethernet255 23 -> 2001:172:20:20::1 50200
+2023-04-17 16:15:08 info prtTcp.connectionRcvd:prtTcp.java:907 got future acknowledge number telnet ethernet255 23 -> 2001:172:20:20::1 50200
