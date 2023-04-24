@@ -4,7 +4,10 @@ topology:
   nodes:
     fod1:
       kind: linux
-      image: ghcr.io/GEANT/fod-exabgp:latest 
+      #image: ghcr.io/geant/fod-exabgp:latest 
+      image: cl1:latest
+      publish:
+              - tcp/8000
     rtr1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:latest 
@@ -14,6 +17,11 @@ topology:
     host2:
       kind: linux
       image: floui/tiny-net-tools:latest 
+
+    # adding mysocketio container which has border0 client packaged
+    #border0:
+    #  kind: border0
+
   links:
     # 10.1.10.1 /24 <-> 10.1.10.10 /24
     - endpoints:
@@ -27,3 +35,5 @@ topology:
     - endpoints:
       - fod1:eth1
       - rtr1:eth3
+
+
