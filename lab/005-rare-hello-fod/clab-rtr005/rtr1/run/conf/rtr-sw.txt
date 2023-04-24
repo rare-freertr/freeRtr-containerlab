@@ -62,8 +62,8 @@ interface ethernet2
 !
 interface ethernet255
  vrf forwarding OOB
- ipv4 address 172.20.20.3 255.255.255.0
- ipv6 address 2001:172:20:20::3 ffff:ffff:ffff:ffff::
+ ipv4 address 172.20.20.2 255.255.255.0
+ ipv6 address 2001:172:20:20::2 ffff:ffff:ffff:ffff::
  no shutdown
  no log-link-change
  exit
@@ -83,6 +83,7 @@ router bgp4 1
  no safe-ebgp
  address-family unicast flowspec
  flowspec-install
+ flowspec-advert flowspec-pmap
  !
  neighbor 10.3.10.3 remote-as 1001
  neighbor 10.3.10.3 local-as 2001
