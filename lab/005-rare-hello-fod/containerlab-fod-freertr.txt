@@ -1,0 +1,80 @@
+
+0.
+0.a. git clone freertr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod
+0.b. containerlab deploy -t rtr005.clab.yml
+0.c. containerlab inspect -t rtr005.clab.yml # for later inspection, if needed
+
+Example Output
+
+containerlab inspect -t rtr005.clab.yml 
+INFO[0000] Parsing & checking topology file: rtr005.clab.yml 
++---+-------------------+--------------+--------------------------------------------------+-------+---------+----------------+----------------------+
+| # |       Name        | Container ID |                      Image                       | Kind  |  State  |  IPv4 Address  |     IPv6 Address     |
++---+-------------------+--------------+--------------------------------------------------+-------+---------+----------------+----------------------+
+| 1 | clab-rtr005-fod1  | b7fab7d87daf | ghcr.io/dschmitz2017/fod:python3                 | linux | running | 172.20.20.2/24 | 2001:172:20:20::2/64 |
+| 2 | clab-rtr005-host1 | 3067db411bd2 | floui/tiny-net-tools:latest                      | linux | running | 172.20.20.4/24 | 2001:172:20:20::4/64 |
+| 3 | clab-rtr005-host2 | 425ac80eeab3 | floui/tiny-net-tools:latest                      | linux | running | 172.20.20.5/24 | 2001:172:20:20::5/64 |
+| 4 | clab-rtr005-rtr1  | eba063c30022 | ghcr.io/rare-freertr/freertr-containerlab:latest | rare  | running | 172.20.20.3/24 | 2001:172:20:20::3/64 |
++---+-------------------+--------------+--------------------------------------------------+-------+---------+----------------+----------------------+
+
+--
+
+1. Configure Hosts 1 and Host 2 and check ping between them (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
+1.a.
+
+docker exec -ti clab-rtr005-host1 ifconfig eth1 10.1.10.1 netmask 255.255.255.0
+docker exec -ti clab-rtr005-host1 route add -net 10.2.10.0 netmask 255.255.255.0 gw 10.1.10.10 
+
+docker exec -ti clab-rtr005-host2 ifconfig eth1 10.2.10.2 netmask 255.255.255.0
+docker exec -ti clab-rtr005-host2 route add -net 10.1.10.0 netmask 255.255.255.0 gw 10.2.10.10 
+
+docker exec -ti clab-rtr005-host1 ping 10.2.10.2
+docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+
+1.b. Check freetrtr (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
+
+docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
+# inside:
+show policy-map flowspec CORE ipv4
+
+#alternative: 
+  docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional"
+  docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | netcat 127.1 2323'
+
+--
+
+2. configure FoD's exabgp peering config:
+  docker exec -ti clab-rtr005-fod1 ./exabgp/run-exabgp-generic --init-conf 10.3.10.3 10.3.10.3 1001 10.3.10.10 10.3.10.10 2001 -- --supervisord --restart
+  to check the exabgp stdout: docker exec -ti clab-rtr005-fod1 tail -f log/exabgp-stdout.log
+
+--
+
+3. install FlowSpec rule to block icmp traffic between host1 and host2, verify traffic being blocked + check freertr mitigation statistics
+3.a. install FlowSpec rule via FoD: 
+ either by UI (http://clab-rtr005-fod1:8000/altlogin ; user=admin password=admin): -> "Add Rule": specify unique rule name, src IP prefix "10.1.10.1/32" and dst IP prefix "10.2.10.2/32", IP proto: "icmp", and press "Apply" below
+ or by command: docker exec -ti clab-rtr005-fod1 ./inst/helpers/enable_rule.sh 10.1.10.1/32 10.2.10.2/32 1 1 # first parameter: src IP prefix; second parameter: dst IP prefix; last but one parameter: 1=icmp ; last parameter: 1=enable rule on router, i.e., push it now
+
+3.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
+docker exec -ti clab-rtr005-host1 ping 10.2.10.2
+docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+
+docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
+# inside:
+show policy-map flowspec CORE ipv4
+
+--
+
+4. de-install FlowSpec rule to block icmp traffic between host1 and host2, verify traffic being passed again + check freertr mitigation statistics
+4.a. de-install FlowSpec rule via FoD: 
+ either by UI (http://clab-rtr005-fod1:8000/altlogin ; user=admin password=admin): on "Rules" page -> Click on "Deactivate" for active rule
+ or by command: docker exec -ti clab-rtr005-fod1 ./inst/helpers/enable_rule.sh 10.1.10.1/32 10.2.10.2/32 1 0 # first parameter: src IP prefix; second parameter: dst IP prefix; last but one parameter: 1=icmp ; last parameter: 0=disable rule on router if it exists and is active or just create rule in INACTIVE state in FoD DB 
+
+4.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
+docker exec -ti clab-rtr005-host1 ping 10.2.10.2
+docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+
+docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
+# inside:
+show policy-map flowspec CORE ipv4
+
+--
