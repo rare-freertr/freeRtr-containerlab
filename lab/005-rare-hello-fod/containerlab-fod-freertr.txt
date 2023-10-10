@@ -2,7 +2,7 @@
 pre-requisites: containerlab (https://containerlab.dev/)
 
 0.
-0.a. git clone freertr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod
+0.a. git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod
 0.b. containerlab deploy -t rtr005.clab.yml
 0.c. containerlab inspect -t rtr005.clab.yml # for later inspection, if needed
 
@@ -40,8 +40,9 @@ docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
 show policy-map flowspec CORE ipv4
 
 #alternative: 
-  docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional'
-  docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | netcat 127.1 2323'
+#  docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional'
+#  docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | netcat 127.1 2323'
+docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 --
 
