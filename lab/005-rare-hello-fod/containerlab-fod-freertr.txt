@@ -29,7 +29,7 @@ docker exec -ti clab-rtr005-host2 ifconfig eth1 10.2.10.2 netmask 255.255.255.0
 docker exec -ti clab-rtr005-host2 route add -net 10.1.10.0 netmask 255.255.255.0 gw 10.2.10.10 
 
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
-docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+docker exec -ti clab-rtr005-host2 ping 10.1.10.1
 
 1.b. Check freetrtr (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
 
@@ -38,12 +38,13 @@ docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
 show policy-map flowspec CORE ipv4
 
 #alternative: 
-  docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional"
+  docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional'
   docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | netcat 127.1 2323'
 
 --
 
 2. configure FoD's exabgp peering config:
+  docker exec -ti clab-rtr005-fod1 ifconfig eth1 10.3.10.3/24
   docker exec -ti clab-rtr005-fod1 ./exabgp/run-exabgp-generic --init-conf 10.3.10.3 10.3.10.3 1001 10.3.10.10 10.3.10.10 2001 -- --supervisord --restart
   to check the exabgp stdout: docker exec -ti clab-rtr005-fod1 tail -f log/exabgp-stdout.log
 
@@ -56,7 +57,7 @@ show policy-map flowspec CORE ipv4
 
 3.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
-docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+docker exec -ti clab-rtr005-host2 ping 10.1.10.1
 
 docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
 # inside:
@@ -71,7 +72,7 @@ show policy-map flowspec CORE ipv4
 
 4.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
-docker exec -ti clab-rtr005-host1 ping 10.1.10.1
+docker exec -ti clab-rtr005-host2 ping 10.1.10.1
 
 docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323
 # inside:
