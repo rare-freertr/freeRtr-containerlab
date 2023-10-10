@@ -24,10 +24,6 @@ scheduler errors
  exit
 !
 access-list flowspec-rules
- !sequence 10 deny 6 10.10.10.1 255.255.255.255 123-129 20.20.20.1 255.255.255.255 200-400
- !sequence 20 deny 7 10.10.10.1 255.255.255.255 123-129 20.20.20.1 255.255.255.255 200-400
- !sequence 30 deny 6 12.12.12.1 255.255.255.255 123-129 20.20.20.1 255.255.255.255 200-400
- !sequence 40 deny 6 12.12.12.1 255.255.255.255 123-129 22.20.20.1 255.255.255.255 200-400
  exit
 !
 prefix-list ALL4
@@ -51,11 +47,15 @@ vrf definition OOB
  exit
 !
 interface ethernet1
+ vrf forwarding CORE
+ ipv4 address 10.1.10.10 255.255.255.0
  no shutdown
  no log-link-change
  exit
 !
 interface ethernet2
+ vrf forwarding CORE
+ ipv4 address 10.2.10.10 255.255.255.0
  no shutdown
  no log-link-change
  exit
