@@ -1,4 +1,6 @@
 
+pre-requisites: containerlab (https://containerlab.dev/)
+
 0.
 0.a. git clone freertr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod
 0.b. containerlab deploy -t rtr005.clab.yml
