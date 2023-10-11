@@ -17,13 +17,16 @@ set -e
 type -p containerlab || { echo "containerlab must be installed"; exit 1; }
 
 echo "0.a." 1>&2 
-if [ ! -d ./freeRtr-containerlab/lab/005-rare-hello-fod ]; then
-  (set -x; git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod)
-  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
-else
-  (set -x; cd ./freeRtr-containerlab/lab/005-rare-hello-fod)
-  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
-fi
+# not really executed here, as we are just working in the already check-out working dir here:
+echo "git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod"
+
+#if [ ! -d ./freeRtr-containerlab/lab/005-rare-hello-fod ]; then
+#  (set -x; git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod)
+#  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
+#else
+#  (set -x; cd ./freeRtr-containerlab/lab/005-rare-hello-fod)
+#  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
+#fi
 
 echo 1>&2
 echo "0.b." 1>&2
