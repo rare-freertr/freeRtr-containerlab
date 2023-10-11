@@ -67,7 +67,7 @@ docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show 
 And, also before and after you can query freertr flowspec status/statistics as in 1.b.2
 
 
-3.b. now verify icmp traffic being blocked (cmp. 1.a. and 1.b.)
+3.b. now verify icmp traffic being blocked (cmp. 1.b.1.)
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
 AND/OR
 docker exec -ti clab-rtr005-host2 ping 10.1.10.1
@@ -89,7 +89,7 @@ docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show 
 And, also before and after you can query freertr flowspec status/statistics as in 1.b.2 and 3.a
 
 
-4.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
+4.b. now check icmp traffic to be blocked (cmp. 3.b.)
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
 AND/OR
 docker exec -ti clab-rtr005-host2 ping 10.1.10.1
