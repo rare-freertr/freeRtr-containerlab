@@ -91,6 +91,7 @@ And, also before and after you can query freertr flowspec status/statistics as i
 
 4.b. now check icmp traffic to be blocked (cmp. 1.a. and 1.b.)
 docker exec -ti clab-rtr005-host1 ping 10.2.10.2
+AND/OR
 docker exec -ti clab-rtr005-host2 ping 10.1.10.1
 
 docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323 # inside type: show policy-map flowspec CORE ipv4
