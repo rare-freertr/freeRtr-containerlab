@@ -16,14 +16,14 @@ set -x
 
 type -p containerlab || { echo "containerlab must be installed"; exit 1; }
 
-#echo 0.a. 
+echo "0.a." 1>&2 
 git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./freeRtr-containerlab/lab/005-rare-hello-fod
 
-#0.b. 
+echo "0.b." 1>&2
 containerlab destroy -t rtr005.clab.yml || true
 containerlab deploy -t rtr005.clab.yml
 
-#0.c. 
+echo "0.c." 1>&2
 containerlab inspect -t rtr005.clab.yml # for later inspection, if needed
 
 # really needed
@@ -37,10 +37,10 @@ clear
 
 ##
 
-# 1. setup of hosts + test0: unblocked ping (FoD's exabgp not yet connected to freertr)
-# (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
+echo "1. setup of hosts + test0: unblocked ping (FoD's exabgp not yet connected to freertr)" 1>&2
+echo "(freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)" 1>&2
 
-# 1.a. setup of hosts
+echo "1.a. setup of hosts" 1>&2
 docker exec -ti clab-rtr005-host1 ifconfig eth1 10.1.10.1 netmask 255.255.255.0
 docker exec -ti clab-rtr005-host1 route add -net 10.2.10.0 netmask 255.255.255.0 gw 10.1.10.10 
 
@@ -49,18 +49,18 @@ docker exec -ti clab-rtr005-host2 route add -net 10.1.10.0 netmask 255.255.255.0
 
 ##
 
-# 1.b. test0: unblocked ping (FoD's exabgp not yet connected to freertr)
+echo "1.b. test0: unblocked ping (FoD's exabgp not yet connected to freertr)" 1>&2
 
-# 1.b.1. test0.1: check freetrtr flowspec status/statistics (before unblocked ping):
+echo "1.b.0. check freetrtr flowspec status/statistics (before unblocked ping):" 1>&2
 #docker exec -ti clab-rtr005-rtr1 sh -c 'apt-get update && apt-get install netcat-traditional'
 #docker exec -ti clab-rtr005-rtr1 sh -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | netcat 127.1 2323'
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
-# 1.b.2 test0.2: unblocked ping (FoD's exabgp not yet connected to freertr)
+echo "1.b.1 unblocked ping (FoD's exabgp not yet connected to freertr)" 1>&2
 docker exec -ti clab-rtr005-host1 ping -c 5 10.2.10.2
 #docker exec -ti clab-rtr005-host2 ping -c 5 10.1.10.1
 
-# 1.b.3. test0.3: check freetrtr flowspec status/statistics (after blocked ping):
+echo "1.b.2. check freetrtr flowspec status/statistics (after blocked ping):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 #
@@ -78,8 +78,7 @@ set -x
 ##
 
 
-# 2. add peering of fod's exabg to freertr
-
+echo "2. add peering of fod's exabg to freertr:" 1>&2
 docker exec -ti clab-rtr005-fod1 ifconfig eth1 10.3.10.3/24
 docker exec -ti clab-rtr005-fod1 ./exabgp/run-exabgp-generic --init-conf 10.3.10.3 10.3.10.3 1001 10.3.10.10 10.3.10.10 2001 -- --supervisord --restart
 #to check the exabgp stdout: 
@@ -99,23 +98,23 @@ set -x
 
 ##
 
-# 3. test1: blocked ping (with FoD's exabgp peering to freertr)
+echo "3. test1: blocked ping (with FoD's exabgp peering to freertr)" 1>&2
 
-# 3.a. test1.a: add blocking rule via BGP
+echo "3.a. test1.a: add blocking rule via BGP" 1>&2
 
-# 3.a.1.a. show exabgp current exported rules/routes (before adding the blocking rule):
+echo "3.a.1.a. show exabgp current exported rules/routes (before adding the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 3.a.1.b. show freertr flowspec status/statistics (before adding the blocking rule):
+echo "3.a.1.b. show freertr flowspec status/statistics (before adding the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
-# 3.a.2. proper adding of blocking rule:
+echo "3.a.2. proper adding of blocking rule:" 1>&2
 docker exec -ti clab-rtr005-fod1 ./inst/helpers/enable_rule.sh 10.1.10.1/32 10.2.10.2/32 1 1 # first parameter: src IP prefix; second parameter: dst IP prefix; last but one parameter: 1=icmp ; last parameter: 1=enable rule on router, i.e., push it now
 
-# 3.a.3.a. show exabgp current exported rules/routes (after adding the blocking rule):
+echo "3.a.3.a. show exabgp current exported rules/routes (after adding the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 3.a.3.b. show freertr flowspec status/statistics (after adding the blocking rule):
+echo "3.a.3.b. show freertr flowspec status/statistics (after adding the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 #
@@ -132,19 +131,19 @@ set -x
 
 ##
 
-# 3.b. test1.b: perform ping(s) to be blocked with status/statistics before and afterwards
+echo "3.b. test1.b: perform ping to be blocked with status/statistics before and afterwards" 1>&2
 
-# 3.b.1. show exabgp current exported rules/routes:
+echo "3.b.1. show exabgp current exported rules/routes:" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 3.b.2. show freertr flowspec status/statistics (before ping(s) to be blocked):
+echo "3.b.2. show freertr flowspec status/statistics (before ping to be blocked):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
-# 3.b.3. perform proper ping(s) to be blocked:
+echo "3.b.3. perform proper ping to be blocked:" 1>&2
 ! docker exec -ti clab-rtr005-host1 ping -c 10 10.2.10.2
 #! docker exec -ti clab-rtr005-host2 ping -c 10 10.1.10.1
 
-# 3.b.4. show freertr flowspec status/statistics (after ping(s) to be blocked):
+echo "3.b.4. show freertr flowspec status/statistics (after ping to be blocked):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 #
@@ -161,23 +160,23 @@ set -x
 
 ##
 
-# 4. test2: unblocked ping (with FoD's exabgp peering to freertr)
+echo "4. test2: unblocked ping (with FoD's exabgp peering to freertr)" 1>&2
 
-# 4.a. test2.a: remove blocking rule via BGP
+echo "4.a. test2.a: remove blocking rule via BGP" 1>&2
 
-# 4.a.1.a. show exabgp current exported rules/routes (before removing the blocking rule):
+echo "4.a.1.a. show exabgp current exported rules/routes (before removing the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 4.a.1.b. show freertr flowspec status/statistics (before removeing the blocking rule):
+echo "4.a.1.b. show freertr flowspec status/statistics (before removing the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
-# 4.a.2. proper removing of the blocking rule via BGP 
+echo "4.a.2. proper removing of the blocking rule via BGP:" 1>&2
 docker exec -ti clab-rtr005-fod1 ./inst/helpers/enable_rule.sh 10.1.10.1/32 10.2.10.2/32 1 0 # first parameter: src IP prefix; second parameter: dst IP prefix; last but one parameter: 1=icmp ; last parameter: 0=disable rule on router if it exists and is active or just create rule in INACTIVE state in FoD DB 
 
-# 4.a.3.a. show exabgp current exported rules/routes (after removing the blocking rule):
+echo "4.a.3.a. show exabgp current exported rules/routes (after removing the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 4.a.3.b. show freertr flowspec status/statistics (after removing the blocking rule):
+echo "4.a.3.b. show freertr flowspec status/statistics (after removing the blocking rule):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 #
@@ -194,19 +193,19 @@ set -x
 
 ##
 
-# 4.b. test2.b: perform ping(s) to be NOT blocked with status/statistics before and afterwards
+echo "4.b. test2.b: perform ping NOT to be blocked with status/statistics before and afterwards" 1>&2
 
-# 4.b.1. show exabgp current exported rules/routes:
+echo "4.b.1. show exabgp current exported rules/routes:" 1>&2
 docker exec -ti clab-rtr005-fod1 sh -c '. ./venv/bin/activate && exabgpcli show adj-rib out extensive'
 
-# 4.b.2. show freertr flowspec status/statistics (before ping(s) NOT to be blocked):
+echo "4.b.2. show freertr flowspec status/statistics (before ping NOT to be blocked):" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
-# 4.b.1. proper ping(s) to be not blocked:
+echo "4.b.3. proper ping NOT to be blocked:" 1>&2
 docker exec -ti clab-rtr005-host1 ping -c 10 10.2.10.2
 #docker exec -ti clab-rtr005-host2 ping -c 10 10.1.10.1
 
-# 4.b.2. test2: show freertr flowspec status/statistics (after ping(s) NOT to be blocked)
+echo "4.b.4. show freertr flowspec status/statistics (after ping NOT to be blocked)" 1>&2
 docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)'
 
 ##
