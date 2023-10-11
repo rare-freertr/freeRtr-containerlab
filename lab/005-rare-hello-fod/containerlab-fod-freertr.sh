@@ -31,7 +31,8 @@ echo "git clone https://github.com/rare-freertr/freeRtr-containerlab && cd ./fre
 echo 1>&2
 echo "0.b." 1>&2
 (set -x; containerlab destroy -t rtr005.clab.yml || true)
-(set -x; containerlab deploy --reconfigure -t rtr005.clab.yml)
+#(set -x; containerlab deploy --reconfigure -t rtr005.clab.yml)
+(set -x; containerlab deploy -t rtr005.clab.yml)
 
 echo 1>&2
 echo "0.c." 1>&2
