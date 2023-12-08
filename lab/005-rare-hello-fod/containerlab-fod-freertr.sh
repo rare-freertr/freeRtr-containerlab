@@ -153,8 +153,21 @@ echo "git clone -b feature/exabgp-support2 https://github.com/GEANT/FOD && cd ./
 #  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
 #fi
 
+##
+
+# helper defintions
+attacker_ip="10.1.10.1"
+victim_ip="10.2.10.2"
+fod_bgp_ip="10.3.10.3"
+freertr_bgp_ip="10.3.10.10"
+
+##
+
 echo1 "$0: containerlab topology definition (./rtr005.clab.yml):" 1>&2
 (set -x; cat ./rtr005.clab.yml | nl -ba)
+
+echo1 "$0: resulting topology:" 1>&2
+show_container_overview
 
 echo1 "$0: 0.b. (re-)init containerlab:" 1>&2
 (set -x; containerlab destroy -t rtr005.clab.yml || true)
@@ -172,14 +185,6 @@ sleep "$w" # need enough time for freertr to be ready
 #set -x
 
 clear
-
-##
-
-# helper defintions
-attacker_ip="10.1.10.1"
-victim_ip="10.2.10.2"
-fod_bgp_ip="10.3.10.3"
-freertr_bgp_ip="10.3.10.10"
 
 ##
 
