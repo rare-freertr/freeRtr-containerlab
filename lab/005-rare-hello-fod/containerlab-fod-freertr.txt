@@ -21,7 +21,7 @@ INFO[0000] Parsing & checking topology file: rtr005.clab.yml
 
 --
 
-1. configure host 1 and host 2 and check ping between them (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
+1. configure host 1 and host 2 and check ping between them (freertr is already configured by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
 
 1.a. configure host 1 and host 2
 docker exec -ti clab-rtr005-host1 ifconfig eth1 10.1.10.1 netmask 255.255.255.0
@@ -38,7 +38,7 @@ AND/OR
 docker exec -ti clab-rtr005-host2 ping 10.1.10.1
 
 1.b.2 check freertr flowspec status/statistics
-check freetrtr (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
+check freetrtr (freertr is already configured by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)
 
 docker exec -ti clab-rtr005-rtr1 telnet 127.0.0.1 2323 # inside type: show policy-map flowspec CORE ipv4
 

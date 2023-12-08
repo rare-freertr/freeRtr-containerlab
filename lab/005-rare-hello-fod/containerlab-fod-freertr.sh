@@ -184,7 +184,7 @@ echo1 "$0: 1. setup of hosts + test0: unblocked ping (FoD's exabgp not yet conne
 
 show_container_overview
 
-echo1 "$0: (freertr is already configured as needed by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)" 1>&2
+echo1 "$0: (freertr is already configured by ./clab-rtr005/rtr1/run/conf/rtr-sw.txt : interface as well as server bgp config)" 1>&2
 
 echo1 "$0: 1.a. setup of hosts" 1>&2
 
