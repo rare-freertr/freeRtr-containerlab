@@ -79,7 +79,8 @@ function output_with_specific_colormarks() {
   if type awk &>/dev/null; then
     awk '
       $0 ~ regex {  
-        print "\x1b[31;1m" $0 "\x1b[0m"
+        #print "\x1b[31;1m" $0 "\x1b[0m"
+        print "\x1b[35;1m" $0 "\x1b[0m"
         next
       }
       { print; }      
