@@ -308,8 +308,8 @@ echo1 "$0: 3.b.2. show freertr flowspec status/statistics (before ping to be blo
 
 
 echo1 "$0: 3.b.3. perform proper ping to be blocked (attacker $attacker_ip -> victim $victim_ip):" 1>&2
-(set -x; ! docker exec -ti clab-rtr005-host1 ping -c 10 10.2.10.2) | output_with_specific_colormarks "packets transmitted, .* received, .* packet loss"
-#(set -x; ! docker exec -ti clab-rtr005-host2 ping -c 10 10.1.10.1)
+(set -x; ! docker exec -ti clab-rtr005-host1 ping -c 5 10.2.10.2) | output_with_specific_colormarks "packets transmitted, .* received, .* packet loss"
+#(set -x; ! docker exec -ti clab-rtr005-host2 ping -c 5 10.1.10.1)
 
 echo1 "$0: 3.b.4. show freertr flowspec status/statistics (after ping to be blocked):" 1>&2
 (set -x; docker exec -ti clab-rtr005-rtr1 bash -c '{ echo "show ipv4 bgp 1 flowspec database"; echo "show policy-map flowspec CORE ipv4"; echo exit; } | (exec 3<>/dev/tcp/127.0.0.1/2323; cat >&3; cat <&3; exec 3<&-)') | output_with_specific_colormarks '(f01:200a:20a:202:200a:10a:103:8101)|(drp=[0-9])'
