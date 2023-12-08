@@ -153,6 +153,9 @@ echo "git clone -b feature/exabgp-support2 https://github.com/GEANT/FOD && cd ./
 #  cd ./freeRtr-containerlab/lab/005-rare-hello-fod
 #fi
 
+echo1 "$0: containerlab topology definition (./rtr005.clab.yml):" 1>&2
+(set -x; cat ./rtr005.clab.yml | nl -ba)
+
 echo1 "$0: 0.b. (re-)init containerlab:" 1>&2
 (set -x; containerlab destroy -t rtr005.clab.yml || true)
 #(set -x; containerlab deploy --reconfigure -t rtr005.clab.yml)
