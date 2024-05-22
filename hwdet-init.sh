@@ -14,11 +14,11 @@ HW_FILE=$CONF_DIR/rtr-hw.txt
 SW_FILE=$CONF_DIR/rtr-sw.txt
 
 # wait for all node interfaces to come up
-NODE_INTFS=`ip -o link show | grep -P 'eth[1-9]\d?' | wc -l`
+NODE_INTFS=`ip -o link show | grep -P 'eth[1-9]\d?@' | wc -l`
 while (( $NODE_INTFS != $CLAB_INTFS ))  
 do
   sleep 1
-  NODE_INTFS=`ip -o link show | grep -P 'eth[1-9]\d?' | wc -l`
+  NODE_INTFS=`ip -o link show | grep -P 'eth[1-9]\d?@' | wc -l`
 done
 
 if [ ! -d "$CONF_DIR" ] ; then
