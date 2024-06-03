@@ -6,70 +6,172 @@ topology:
     rare:
       image: ghcr.io/rare-freertr/freertr-containerlab:latest 
   nodes:
-    node1-1:
+    leaf111:
       kind: rare
       group: tier-1
-#      startup-delay: 5
-    node1-2:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+    leaf112:
       kind: rare
       group: tier-1
-      wait-for:
-        - node1-1
-    node1-3:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf111
+              stage: healthy
+    leaf121:
       kind: rare
       group: tier-1
-      wait-for:
-        - node1-2
-    node1-4:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf112
+              stage: healthy
+    leaf122:
       kind: rare
       group: tier-1
-      wait-for:
-        - node1-3
-    node2-1:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf121
+              stage: healthy
+    spin111:
       kind: rare
       group: tier-2
-      wait-for:
-        - node1-4
-    node2-2:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf122
+              stage: healthy
+    spin112:
       kind: rare
       group: tier-2
-      wait-for:
-        - node2-1
-    node3-1:
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: spin111
+              stage: healthy
+    tof-21:
       kind: rare
       group: tier-3
-      wait-for:
-        - node2-2
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: spin112
+              stage: healthy
+    tof-22:
+      kind: rare
+      group: tier-3
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: spin112
+              stage: healthy
+    spin121:
+      kind: rare
+      group: tier-2
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf121
+              stage: healthy
+    spin122:
+      kind: rare
+      group: tier-2
+      healthcheck:
+        test:
+          - CMD-SHELL
+          - pidof java 
+      stages:
+        create:
+          wait-for:
+            - node: leaf122
+              stage: healthy
   links:
   - endpoints:
-    - node1-1:eth1
-    - node2-1:eth1
+    - leaf111:eth1
+    - spin111:eth3
   - endpoints:
-    - node1-1:eth2
-    - node2-2:eth1
+    - leaf111:eth2
+    - spin112:eth3
   - endpoints:
-    - node1-2:eth1
-    - node2-1:eth2
+    - leaf112:eth1
+    - spin111:eth4
   - endpoints:
-    - node1-2:eth2
-    - node2-2:eth2
+    - leaf112:eth2
+    - spin112:eth4
+
   - endpoints:
-    - node1-3:eth1
-    - node2-1:eth3
+    - leaf121:eth1
+    - spin121:eth3
   - endpoints:
-    - node1-3:eth2
-    - node2-2:eth3
+    - leaf121:eth2
+    - spin122:eth3
   - endpoints:
-    - node1-4:eth1
-    - node2-1:eth4
+    - leaf122:eth1
+    - spin121:eth4
   - endpoints:
-    - node1-4:eth2
-    - node2-2:eth4
+    - leaf122:eth2
+    - spin122:eth4
+
   - endpoints:
-    - node2-1:eth5
-    - node3-1:eth1
+    - tof-21:eth1
+    - spin111:eth1
   - endpoints:
-    - node2-2:eth5
-    - node3-1:eth2
+    - tof-21:eth2
+    - spin112:eth1
+  - endpoints:
+    - tof-21:eth3
+    - spin121:eth1
+  - endpoints:
+    - tof-21:eth4
+    - spin122:eth1
+
+  - endpoints:
+    - tof-22:eth1
+    - spin111:eth2
+  - endpoints:
+    - tof-22:eth2
+    - spin112:eth2
+  - endpoints:
+    - tof-22:eth3
+    - spin121:eth2
+  - endpoints:
+    - tof-22:eth4
+    - spin122:eth2
 debug: false
 

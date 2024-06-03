@@ -1,0 +1,23 @@
+2024-06-03 14:38:17 info cfgInit.doInit:cfgInit.java:780 booting
+2024-06-03 14:38:17 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2024-06-03 14:38:17 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2024-06-03 14:38:18 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2024-06-03 16:38:18 info cfgInit.executeSWcommands:cfgInit.java:768 line 62: "do write" : % saving configuration  % success  
+2024-06-03 16:38:18 info cfgInit.executeSWcommands:cfgInit.java:768 line 68: "ipv6 address  /64" : % invalid address  
+2024-06-03 16:38:18 info cfgInit.executeSWcommands:cfgInit.java:768 line 71: "do write" : % saving configuration  % success  
+2024-06-03 16:38:18 error cfgInit.doInit:cfgInit.java:998 3 errors found
+2024-06-03 16:38:18 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2024-06-03 16:38:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2024-06-03 16:38:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2024-06-03 16:38:19 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2024-06-03 15:00:39 info cfgInit.doInit:cfgInit.java:780 booting
+2024-06-03 15:00:39 info cfgInit.doInit:cfgInit.java:963 initializing hardware
+2024-06-03 15:00:39 info cfgInit.doInit:cfgInit.java:969 applying defaults
+2024-06-03 15:00:39 info cfgInit.doInit:cfgInit.java:990 applying configuration
+2024-06-03 17:00:39 info cfgInit.executeSWcommands:cfgInit.java:768 line 99: "ipv6 address  /64" : % invalid address  
+2024-06-03 17:00:39 info cfgInit.executeSWcommands:cfgInit.java:768 line 102: "do write" : % saving configuration  % success  
+2024-06-03 17:00:39 error cfgInit.doInit:cfgInit.java:998 2 errors found
+2024-06-03 17:00:39 info cfgInit.doInit:cfgInit.java:1026 boot completed
+2024-06-03 17:00:41 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2024-06-03 17:00:41 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc2.sh
+2024-06-03 17:00:41 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh

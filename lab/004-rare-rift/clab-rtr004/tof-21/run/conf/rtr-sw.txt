@@ -1,0 +1,105 @@
+hostname tof-21
+buggy
+!
+logging buffered debug 10240
+logging file debug /rtr/run/logs/freertr.log
+logging rotate 655360000 /rtr/run/logs/freertr.old
+!
+crypto rsakey rsa import $v10$TUlJRW9RSUJBQUtDQVFCMXEwTkorQ0pPb3kramd0WUFDMFpxS1dDZFZLMDZ5TnNMZFZUNG9Zb2FLa1k1WFlVNVlhcGJyVndlR0g1VE8zeHZqWEw4aUNTVkhaUENCaG81RVpJdmt0RzlpNG5oaTF6QlRrd1N0VXR0ZHB6dnZnaTZnaDVpVE9WSXpJNXEyT0NYUE02NFpMd01MM2NRL3FhelpzT3hQUDFuNGNLWUxWTVVsUnhBYjJpNUtlZjV6aUV0ZFR4eGRSWHY4NHdETk05ZkU4SUN2ajZScmV4MVloc1hCYnZZVEZ5MGd0UHlXcS9SdnFISjVaQWxpdzBpbnFEZXJwcTZoYzZPdkwwem02WU1DM0pFQ1JGNEFzQkhFaGRJS0dVTE82RVhFRnlLSStUaFFOZ1NyYnhxdmM3d2ZlV05CTmpMZU5lR0JLTW5uc2pKVGQ5dVV0OEZBMHJDMXY5MzlMN2hBZ01CQUFFQ2dnRUFLOVEyQlNoYXh3VzdxZUVEQ3hNb0VFVUhTck1PcjFXL1dWNUQzelIwZDFpRnZicGE5RXV2bytSSDZxSGU4K3UxWnV1K0I5aENJQlRiUTZyNE80ZVM5d3R0K25jdVRZZVdiaDVXOGFUN3luTWk4NTNLTElacEFONTVqUXM4aFFueFpnUHRUL3VkbThCV1RrczhGcGpSallRVk00dUE2eVArelN6WlVCcnZYQUI4Q0tIWXpyYWoydWRVYi9BOXU3cEsrV2NPVzU0UlllbEZMYlBtNngxTi9lSlI4bUxGK2V2SlhqU2dMRnN5QTBYYVg3TEV1NlRrb3dPUTNaNTgxL1hMTUU2aFNLYWVFZ2tZVGFNdnlzU243NU9EbjlYN01JL25oMDNNOEQ5M1BDTVJCUjRLUmdsT25BYmllOEVyZXFnZkFacUdsMUxlUEpWaUVPTVF6RmRxYlFLQmdRRHBBWHo1VXpuc2hZK2UrWG9IQU05ajIyTmNUZmNQTDF0dnN4d1ZhMUJtT1FhMGl5UFRaV2h2L0xtOXVqT2FiQnNIb3RETHNWRE9EbVZDUHZIN0poeHJDNlRrTW1XTGRqYVJKRTJDNDJ4MFUrN0N1QXRWVW10d1QveVdzTGlvNVYrRWt6SjBPd1NUY2RHMGhicFJkaGxtTmZHdTdDbUxha2hhMTZpQk93c0RWd0tCZ1FDQlIvcGtPSDdORVlzQ2xid2EvdTltekdWSDU4TUM0SXhkVkZPQWhDTmxMQ21semhyaWdpQkkyZC9yZ2QvanJvTHU4anpOYkVXVTkwdmZHRCt2SG0xTHg2TE91QUc3Vm1KMTJsd254TktRWThsMnBudVM1bG11eEw2RmpGSWszRHJIbEFRQUowcW1JY1hHVEpaaElkb3Y1UHhtQTl4YkpuN1c1TWg2Witoa2h3S0JnRUk2amc5QVBNS2g1QVRIM0l1SkMyblN2aGRLZ2VMckR3NWMxcXF2Nmhaa055ZXlOT2l0ZGxYK2U3MFY0LzBNcFZJeVVTN1VvNmN1S0ZJQUdqL013VjhiM0M2UXRKUkRjWmNudm5CcHZEWUVkV1ViY3YwNWhCaFVZL05oSDl2QjlyaDBMbThqSjFYUmtFM0RoUVlLajRXaDU2UlV0Q3BRZDJoNnpBYVBoYjNaQW9HQVdBVDFpWDZkZG1sWFI2OUNudTZyZUVYNVB2ZWdZamtYMkFNdHh2WXdVeFc2VlZUNklQV1BuWW9aVm5MYVNGM3NiMXNsNG9hdzZUZGx4TUx4dVB6eVZRSGE2dnVFMGxPQ1BkTXBvem55VXJSZDJoYUhWQURaVnBCRlZ3K3ViY0l6a3VaSHd3TDlaQmJpWEp5UVZobUNQOUdidHFreVFpejNkci9WYnVHSDY4a0NnWUJ5RXR1emdCVWZGRVE2NjA0bTlDd3FaRlNRYmNQK1ZhOW5QSnR6Y2ExRGpUbXpYdWRGbjFlNmtsMDZOcTNMUDh6alFKTEhUTkVLSWRNaXBtNllNOWlKa0sraWE5Z1FUSWJGTHdzWUV4R1pYbFk4dlN0c2x1ZnhFSXhpRXpmSWR3dmlwZnEyZmEzbG83NG84STFwL1NEL1J5MUpZM1diUlBOcWwyYnc1VUY0bmc9PQ==
+!
+crypto dsakey dsa import $v10$TUlJQnVRSUJBQUtCZ0ROVk95WkRKbmtuU3ZtOUJEMG1JWG5rdlZsMXNpNEJYd2phdk92SU9MSnJZaktuaENLU1VYRTdjdzFYL0FWbVE4TDAwVTl3dnIrQTVEN054UmtNb1dTZ0VYRHpaeGtWN0lYTGIvNEhwNnY3YVRuS0pNRGZjc0RwMHN2TmNEM2gwSkhGdE95Z3AyWVlQU0FMY255T0dvMTI4SUVJcU1SdkhQNlZhYmxDeEpsN0FoVUFnQS92RmdCMWVqZ3NWSFFRaXRTazA2M256dzBDZ1lBbVdDNHVQZko0M2QvSFRDMnhLQU9WT2E5dFQ1cHRpWHJUNHR4eUYzb0ZrdHpHcVpiVHhmbjBGZGp2TUpzNUZ5QmgybDBtaXMyU09LSFIvRExjL3I1UVFSSmNLWGpXRlJlK2V5cmRaY2MvRi8xaFIyYk9qM2swWUYyREpSQWVMK1Nia2VWL3B2VUMyWlhVUXpDc01MeDFURzdzeURZSDNlN2FzcXZvV21TNzhBS0JnQjdyYnY3MVo2VkMrZ0ErZHVhbitrbW91RklBQ3BYMXE2OVZiMWV0MFFaK2xXZWlLOEhDejF6MEIwVDFiUmhwSnlMNys3d0lPOG4vZnFyS2t0QXpIRUU0MlBBcEpCMm9sRjdOSHo5WWgybUdmcm1tR3J4SFJlY1pGckdiaHgyMUZtaGM4Sk1xcHBFenk3dnhnbndzOCtMWnF0ZklkWUN3MEx6clp1dUh4TGRBQWhReWJKc21qWXNweWtTZHhmblRnMmRnL3JocUpRPT0=
+!
+crypto ecdsakey ecdsa import $v10$TUhNQ0FRRUVIMjVJZmRUd0lidnZYNzVScFNVRm85SmlNSlRPSU1BdTU1WEpBeDl5Z0pLZ0J3WUZLNEVFQUFxaFJBTkNBQVJKMlZXVy84ZFpzbUp3NDBqcnh3Z0RhT1lvWjNPQzlCajlvWnljdlFJelhpRGNrMUQvZDZvOVJCY1VIZjVibTBadXZMZmJGd015NUVWbjkzVDhodk5k
+!
+aaa userlist usr
+ username rare
+ username rare password $v10$cmFyZQ==
+ exit
+!
+scheduler errors
+ time 600000
+ delay 30000
+ command clear errors freerror@nop.hu
+ start
+ exit
+!
+prefix-list ALL4
+ sequence 10 permit 0.0.0.0/0 ge 0 le 0
+ exit
+!
+prefix-list ALL6
+ sequence 10 permit ::/0 ge 0 le 0
+ exit
+!
+vrf definition OOB
+ exit
+!
+interface ethernet1
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet2
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet255
+ vrf forwarding OOB
+ ipv4 address 172.20.20.10 255.255.255.0
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet3
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet4
+ no shutdown
+ no log-link-change
+ exit
+!
+console0
+ no exec authorization
+ no login authentication
+ exit
+!
+proxy-profile OOB
+ vrf OOB
+ exit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+server telnet OOB
+ security authentication usr
+ security rsakey rsa
+ security dsakey dsa
+ security ecdsakey ecdsa
+ second-port 22
+ exec logging
+ no exec authorization
+ login authentication usr
+ login logging
+ vrf OOB
+ exit
+!
+client proxy OOB
+client capture-path /rtr/run/pcap/
+client name-server 1.1.1.1
+client time-server europe.pool.ntp.org
+client time-zone CET
+!
+end

@@ -1,0 +1,12 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+123: eth3@if124: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether aa:c1:ab:b5:85:8a brd ff:ff:ff:ff:ff:ff link-netnsid 1
+133: eth4@if134: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether aa:c1:ab:d6:8d:bb brd ff:ff:ff:ff:ff:ff link-netnsid 2
+139: eth0@if140: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether 02:42:ac:14:14:08 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+146: eth1@if145: <BROADCAST,MULTICAST,UP> mtu 9500 qdisc noqueue state UNKNOWN mode DEFAULT group default 
+    link/ether aa:c1:ab:37:e7:b0 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+148: eth2@if147: <BROADCAST,MULTICAST,UP> mtu 9500 qdisc noqueue state UNKNOWN mode DEFAULT group default 
+    link/ether aa:c1:ab:d2:d6:3e brd ff:ff:ff:ff:ff:ff link-netnsid 0

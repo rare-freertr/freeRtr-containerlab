@@ -1,0 +1,12 @@
+hwid xxx
+proc ifc1.sh /rtr/run/conf/pcapInt.bin eth1 20002 127.0.0.1 20001 127.0.0.1
+int eth1 eth aa:c1:ab:eb:a8:c4 127.0.0.1 20001 127.0.0.1 20002
+proc ifc2.sh /rtr/run/conf/pcapInt.bin eth2 20012 127.0.0.1 20011 127.0.0.1
+int eth2 eth aa:c1:ab:39:62:90 127.0.0.1 20011 127.0.0.1 20012
+proc ifc3.sh /rtr/run/conf/pcapInt.bin eth3 20022 127.0.0.1 20021 127.0.0.1
+int eth3 eth aa:c1:ab:41:3c:6e 127.0.0.1 20021 127.0.0.1 20022
+proc ifc4.sh /rtr/run/conf/pcapInt.bin eth4 20032 127.0.0.1 20031 127.0.0.1
+int eth4 eth aa:c1:ab:c2:cc:89 127.0.0.1 20031 127.0.0.1 20032
+proc ifc255.sh /rtr/run/conf/pcapInt.bin eth0 22552 127.0.0.1 22551 127.0.0.1
+int eth255 eth 02:42:ac:14:14:0a 127.0.0.1 22551 127.0.0.1 22552
+tcp2vrf 2323 OOB 23

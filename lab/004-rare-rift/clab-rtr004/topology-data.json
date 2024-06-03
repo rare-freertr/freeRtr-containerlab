@@ -6,24 +6,24 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-f7386a789496",
+        "bridge": "br-29795f0e6427",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "2001:172:20:20::/64",
         "ipv6-gw": "2001:172:20:20::1",
-        "mtu": "1500",
+        "mtu": 1500,
         "external-access": true
       }
     }
   },
   "nodes": {
-    "node1-1": {
+    "leaf111": {
       "index": "0",
-      "shortname": "node1-1",
-      "longname": "clab-rtr004-node1-1",
-      "fqdn": "node1-1.rtr004.io",
+      "shortname": "leaf111",
+      "longname": "clab-rtr004-leaf111",
+      "fqdn": "leaf111.rtr004.io",
       "group": "tier-1",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-1",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf111",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -34,23 +34,25 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
         "clab-node-group": "tier-1",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-1",
-        "clab-node-name": "node1-1",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf111",
+        "clab-node-name": "leaf111",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
     },
-    "node1-2": {
+    "leaf112": {
       "index": "1",
-      "shortname": "node1-2",
-      "longname": "clab-rtr004-node1-2",
-      "fqdn": "node1-2.rtr004.io",
+      "shortname": "leaf112",
+      "longname": "clab-rtr004-leaf112",
+      "fqdn": "leaf112.rtr004.io",
       "group": "tier-1",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-2",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf112",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -61,23 +63,25 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
         "clab-node-group": "tier-1",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-2",
-        "clab-node-name": "node1-2",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf112",
+        "clab-node-name": "leaf112",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
     },
-    "node1-3": {
+    "leaf121": {
       "index": "2",
-      "shortname": "node1-3",
-      "longname": "clab-rtr004-node1-3",
-      "fqdn": "node1-3.rtr004.io",
+      "shortname": "leaf121",
+      "longname": "clab-rtr004-leaf121",
+      "fqdn": "leaf121.rtr004.io",
       "group": "tier-1",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-3",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf121",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -88,50 +92,25 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
         "clab-node-group": "tier-1",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-3",
-        "clab-node-name": "node1-3",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf121",
+        "clab-node-name": "leaf121",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
     },
-    "node1-4": {
+    "leaf122": {
       "index": "3",
-      "shortname": "node1-4",
-      "longname": "clab-rtr004-node1-4",
-      "fqdn": "node1-4.rtr004.io",
+      "shortname": "leaf122",
+      "longname": "clab-rtr004-leaf122",
+      "fqdn": "leaf122.rtr004.io",
       "group": "tier-1",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-4",
-      "kind": "rare",
-      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
-      "mgmt-net": "",
-      "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
-      "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::5",
-      "mgmt-ipv6-prefix-length": 64,
-      "mac-address": "",
-      "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
-        "clab-node-group": "tier-1",
-        "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node1-4",
-        "clab-node-name": "node1-4",
-        "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
-        "containerlab": "rtr004"
-      }
-    },
-    "node2-1": {
-      "index": "4",
-      "shortname": "node2-1",
-      "longname": "clab-rtr004-node2-1",
-      "fqdn": "node2-1.rtr004.io",
-      "group": "tier-2",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node2-1",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf122",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -142,23 +121,25 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
-        "clab-node-group": "tier-2",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
+        "clab-node-group": "tier-1",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node2-1",
-        "clab-node-name": "node2-1",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/leaf122",
+        "clab-node-name": "leaf122",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
     },
-    "node2-2": {
-      "index": "5",
-      "shortname": "node2-2",
-      "longname": "clab-rtr004-node2-2",
-      "fqdn": "node2-2.rtr004.io",
+    "spin111": {
+      "index": "4",
+      "shortname": "spin111",
+      "longname": "clab-rtr004-spin111",
+      "fqdn": "spin111.rtr004.io",
       "group": "tier-2",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node2-2",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin111",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -169,23 +150,83 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
         "clab-node-group": "tier-2",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node2-2",
-        "clab-node-name": "node2-2",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin111",
+        "clab-node-name": "spin111",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
     },
-    "node3-1": {
+    "spin112": {
+      "index": "5",
+      "shortname": "spin112",
+      "longname": "clab-rtr004-spin112",
+      "fqdn": "spin112.rtr004.io",
+      "group": "tier-2",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin112",
+      "kind": "rare",
+      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
+        "clab-node-group": "tier-2",
+        "clab-node-kind": "rare",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin112",
+        "clab-node-name": "spin112",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "containerlab": "rtr004"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spin121": {
       "index": "6",
-      "shortname": "node3-1",
-      "longname": "clab-rtr004-node3-1",
-      "fqdn": "node3-1.rtr004.io",
-      "group": "tier-3",
-      "labdir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node3-1",
+      "shortname": "spin121",
+      "longname": "clab-rtr004-spin121",
+      "fqdn": "spin121.rtr004.io",
+      "group": "tier-2",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin121",
+      "kind": "rare",
+      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
+        "clab-node-group": "tier-2",
+        "clab-node-kind": "rare",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin121",
+        "clab-node-name": "spin121",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "containerlab": "rtr004"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spin122": {
+      "index": "7",
+      "shortname": "spin122",
+      "longname": "clab-rtr004-spin122",
+      "fqdn": "spin122.rtr004.io",
+      "group": "tier-2",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin122",
       "kind": "rare",
       "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
       "mgmt-net": "",
@@ -196,155 +237,299 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f7386a789496",
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
+        "clab-node-group": "tier-2",
+        "clab-node-kind": "rare",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/spin122",
+        "clab-node-name": "spin122",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "containerlab": "rtr004"
+      },
+      "port-bindings": [
+      ]
+    },
+    "tof-21": {
+      "index": "8",
+      "shortname": "tof-21",
+      "longname": "clab-rtr004-tof-21",
+      "fqdn": "tof-21.rtr004.io",
+      "group": "tier-3",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/tof-21",
+      "kind": "rare",
+      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
         "clab-node-group": "tier-3",
         "clab-node-kind": "rare",
-        "clab-node-lab-dir": "/root/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/node3-1",
-        "clab-node-name": "node3-1",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/tof-21",
+        "clab-node-name": "tof-21",
         "clab-node-type": "",
-        "clab-topo-file": "/root/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
         "containerlab": "rtr004"
-      }
+      },
+      "port-bindings": [
+      ]
+    },
+    "tof-22": {
+      "index": "9",
+      "shortname": "tof-22",
+      "longname": "clab-rtr004-tof-22",
+      "fqdn": "tof-22.rtr004.io",
+      "group": "tier-3",
+      "labdir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/tof-22",
+      "kind": "rare",
+      "image": "ghcr.io/rare-freertr/freertr-containerlab:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-29795f0e6427",
+        "clab-node-group": "tier-3",
+        "clab-node-kind": "rare",
+        "clab-node-lab-dir": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/clab-rtr004/tof-22",
+        "clab-node-name": "tof-22",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/floui/development/freeRtr-containerlab/lab/004-rare-rift/rtr004.clab.yml",
+        "containerlab": "rtr004"
+      },
+      "port-bindings": [
+      ]
     }
   },
   "links": [
     {
       "a": {
-        "node": "node1-1",
+        "node": "leaf111",
         "interface": "eth1",
-        "mac": "aa:c1:ab:9d:0c:96",
+        "mac": "aa:c1:ab:9e:a5:d5",
         "peer": "z"
       },
       "z": {
-        "node": "node2-1",
-        "interface": "eth1",
-        "mac": "aa:c1:ab:67:e3:e5",
-        "peer": "a"
-      }
-    },
-    {
-      "a": {
-        "node": "node1-1",
-        "interface": "eth2",
-        "mac": "aa:c1:ab:42:b0:e9",
-        "peer": "z"
-      },
-      "z": {
-        "node": "node2-2",
-        "interface": "eth1",
-        "mac": "aa:c1:ab:ab:f4:2d",
-        "peer": "a"
-      }
-    },
-    {
-      "a": {
-        "node": "node1-2",
-        "interface": "eth1",
-        "mac": "aa:c1:ab:3f:4f:51",
-        "peer": "z"
-      },
-      "z": {
-        "node": "node2-1",
-        "interface": "eth2",
-        "mac": "aa:c1:ab:cc:21:f5",
-        "peer": "a"
-      }
-    },
-    {
-      "a": {
-        "node": "node1-2",
-        "interface": "eth2",
-        "mac": "aa:c1:ab:0a:80:aa",
-        "peer": "z"
-      },
-      "z": {
-        "node": "node2-2",
-        "interface": "eth2",
-        "mac": "aa:c1:ab:11:74:56",
-        "peer": "a"
-      }
-    },
-    {
-      "a": {
-        "node": "node1-3",
-        "interface": "eth1",
-        "mac": "aa:c1:ab:9e:c4:b8",
-        "peer": "z"
-      },
-      "z": {
-        "node": "node2-1",
+        "node": "spin111",
         "interface": "eth3",
-        "mac": "aa:c1:ab:42:b4:93",
+        "mac": "aa:c1:ab:42:f5:d1",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "node1-3",
+        "node": "leaf111",
         "interface": "eth2",
-        "mac": "aa:c1:ab:c7:39:8c",
+        "mac": "aa:c1:ab:dc:a7:ed",
         "peer": "z"
       },
       "z": {
-        "node": "node2-2",
+        "node": "spin112",
         "interface": "eth3",
-        "mac": "aa:c1:ab:00:9a:4f",
+        "mac": "aa:c1:ab:c8:dd:8b",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "node1-4",
+        "node": "leaf112",
         "interface": "eth1",
-        "mac": "aa:c1:ab:59:62:ce",
+        "mac": "aa:c1:ab:b4:c2:83",
         "peer": "z"
       },
       "z": {
-        "node": "node2-1",
+        "node": "spin111",
         "interface": "eth4",
-        "mac": "aa:c1:ab:85:7a:92",
+        "mac": "aa:c1:ab:bc:a7:a0",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "node1-4",
+        "node": "leaf112",
         "interface": "eth2",
-        "mac": "aa:c1:ab:79:58:f4",
+        "mac": "aa:c1:ab:50:b5:4f",
         "peer": "z"
       },
       "z": {
-        "node": "node2-2",
+        "node": "spin112",
         "interface": "eth4",
-        "mac": "aa:c1:ab:c1:78:c3",
+        "mac": "aa:c1:ab:28:64:c9",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "node2-1",
-        "interface": "eth5",
-        "mac": "aa:c1:ab:67:28:26",
-        "peer": "z"
-      },
-      "z": {
-        "node": "node3-1",
+        "node": "leaf121",
         "interface": "eth1",
-        "mac": "aa:c1:ab:ee:8b:36",
+        "mac": "aa:c1:ab:2f:16:eb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin121",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:8e:43:fe",
         "peer": "a"
       }
     },
     {
       "a": {
-        "node": "node2-2",
-        "interface": "eth5",
-        "mac": "aa:c1:ab:c1:dd:f2",
+        "node": "leaf121",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:51:1f:1c",
         "peer": "z"
       },
       "z": {
-        "node": "node3-1",
+        "node": "spin122",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:b5:85:8a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf122",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d1:28:83",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin121",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:c3:35:0d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf122",
         "interface": "eth2",
-        "mac": "aa:c1:ab:5d:1f:ce",
+        "mac": "aa:c1:ab:35:a2:0f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin122",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:d6:8d:bb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-21",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:eb:a8:c4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin111",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:df:1c:da",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-21",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:39:62:90",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin112",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:76:8c:81",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-21",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:41:3c:6e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin121",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:30:1c:11",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-21",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:c2:cc:89",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin122",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:37:e7:b0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-22",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d7:e5:fc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin111",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5c:bb:ed",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-22",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:49:f2:2b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin112",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c6:21:1b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-22",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:20:3b:bc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin121",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:96:cf:1f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "tof-22",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:2d:11:cf",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spin122",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d2:d6:3e",
         "peer": "a"
       }
     }
