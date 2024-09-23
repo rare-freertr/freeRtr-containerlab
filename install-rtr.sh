@@ -19,9 +19,9 @@ rm rtr.jar
 wget www.freertr.org/rtr.jar
 cd $TMP/binImg/
 rm rtr-`uname -m`.tar
-wget www.freertr.org/rtr-`uname -m`.tar
+wget www.freertr.org/rtr-`uname -m`.tgz
 cd $TMP/binTmp/
-tar xf ../binImg/rtr-`uname -m`.tar
+tar xvf ../binImg/rtr-`uname -m`.tgz
 
 mkdir -p $TRG
 
