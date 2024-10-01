@@ -14,9 +14,9 @@ CONF_DIR=$RUN_DIR/conf
 
 ETH0_MAC=`cat /sys/class/net/eth0/address`
 HOSTNAME=`hostname`
-IPv4=`hostname -i | awk '{print $1}'`
-IPv6=`hostname -i | awk '{print $2}'`
-
+IPv4=$(hostname -i | awk '{for(i=1;i<=NF;i++) if($i ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/) {print $i; exit}}')
+IPv6=$(hostname -i | awk '{for(i=1;i<=NF;i++) if($i ~ /^[0-9a-fA-F:]+$/) {print $i; exit}}')
+ 
 # Identify the end of freeRtr hw|sw file
 
 HW_PENULTIMATE_LINE=`wc -l ${CONF_DIR}/rtr-hw.txt | awk '{print $1}'`
