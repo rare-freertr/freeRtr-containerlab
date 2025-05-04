@@ -16,7 +16,7 @@ apt install -f -y ca-certificates-java
 PKG_LIST="apt-utils default-jre-headless socat ethtool iproute2 net-tools procps \
 libpcap-dev openssl libssl-dev libbpf-dev bpftool \
 zip unzip wget psmisc busybox \
-telnet tshark nmap iperf vim"
+telnet tshark nmap iperf vim ed"
 
 apt-get -f -y --no-install-recommends install $PKG_LIST
 
