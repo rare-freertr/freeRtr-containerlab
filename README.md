@@ -36,6 +36,34 @@ The lab definition file is `rtr000.clab.yml`
 ```
 rtr1 <--eth1--> rtr2
 ``` 
+
+* Dataplane Configuration
+
+You can configure the dataplane type for each router using the `DATAPLANE_TYPE` environment variable in the containerlab topology file. The available options are:
+
+- `pcapInt` (default): Uses the standard packet capture interface
+- `p4emu`: Uses the P4 emulation interface
+
+Example configuration in `rtr000.clab.yml`:
+```yaml
+name: rtr000
+
+topology:
+  nodes:
+    rtr1:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "p4emu"
+    rtr2:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "p4emu"
+  links:
+    - endpoints: ["rtr1:eth1","rtr2:eth1"]
+```
+
 * Artefact folder for each node will be created during lab initialisation (e.g `rtr1` and `rtr2`)
 
 Which format is clab-`lab-name`/`node-name`/run
