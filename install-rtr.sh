@@ -47,6 +47,7 @@ echo kernel.panic=10 > /etc/sysctl.d/panic.conf
 cp $TMP/src/rtr.jar $TRG/
 cp $TMP/src/rtr.ver $TRG/
 cp $TMP/binTmp/*.bin $TRG/
+cp $TMP/binTmp/*.so $TRG/
 
 sync
 

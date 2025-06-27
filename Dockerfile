@@ -7,6 +7,8 @@ COPY ./install-deps.sh /root
 COPY ./install-rtr.sh /root
 COPY ./install-clean.sh /root
 
+# Set default dataplane type (pcapInt or p4emu)
+ENV DATAPLANE_TYPE=pcapInt
 
 RUN ./install-deps.sh
 RUN ./install-rtr.sh
