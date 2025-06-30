@@ -168,8 +168,8 @@ if [ ! -d "$CONF_DIR" ] ; then
   mkdir -p $CONF_DIR $LOGS_DIR $PCAP_DIR $NTFW_DIR $MRT_DIR
 fi
 
-cp /proc/net/dev $CONF_DIR/hwdet.eth
-cp /proc/tty/driver/serial $CONF_DIR/hwdet.ser
+ip link show > $CONF_DIR/hwdet.eth
+#cp /proc/tty/driver/serial $CONF_DIR/hwdet.ser
 ip link show > $CONF_DIR/hwdet.mac
 
 if [ "$DATAPLANE_TYPE" = "p4emu" ]; then
