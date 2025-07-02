@@ -15,6 +15,8 @@ SW_FILE=$CONF_DIR/rtr-sw.txt
 
 # default dataplane type
 DATAPLANE_TYPE=${DATAPLANE_TYPE:-pcapInt}
+# default vrf initialization
+INIT_VRF=${INIT_VRF:-false}
 
 # Function
 initialize_pcapInt() {
@@ -83,8 +85,6 @@ delete_p4_server_sw_file() {
 sed -i '/^server p4lang p4$/,/^!$/d' "$SW_FILE"
 }
 
-
-
 create_vrf_p4_sw_file() {
 if ! ed -s "$SW_FILE" <<'EOF'
 /^vrf definition p4$/,/^ exit$/p
@@ -120,6 +120,7 @@ q
 EOC
 fi
 }
+
 export_ports_p4_server_interfaces_sw_file() {
 for INTF in "${INTERFACES_ARRAY[@]}"; do
   INTF_NUM=${INTF#eth}
@@ -135,6 +136,53 @@ q
 EOF
 
 done
+}
+
+create_vrf_core() {
+  if ! ed -s "$SW_FILE" <<'EOF'
+/^vrf definition CORE$/,/^ exit$/p
+q
+EOF
+  then
+    ed -s "$SW_FILE" <<'EOC'
+$a
+vrf definition CORE
+ exit
+.
+w
+q
+EOC
+  fi
+}
+
+add_export_vrf_to_p4server() {
+  if ! grep -q "export-vrf CORE" "$SW_FILE"; then
+    sed -i '/^ vrf p4$/a\ export-vrf CORE' "$SW_FILE"
+  fi
+}
+
+add_vrf_forwarding_to_interfaces() {
+  for INTF_TYPE in sdn ethernet; do
+    EXCLUDE='ethernet0\|ethernet255'
+    
+    for INTF in $(grep -E "^interface ($INTF_TYPE)[0-9]+" "$SW_FILE" | grep -v "$EXCLUDE" | awk '{print $2}'); do
+      if ! grep -A10 "^interface $INTF\$" "$SW_FILE" | grep -q "vrf forwarding CORE"; then
+        sed -i "/^interface $INTF\$/a\ vrf forwarding CORE" "$SW_FILE"
+      fi
+    done
+  done
+}
+
+add_export_bridges_to_p4server() {
+  for BRIDGE_ID in $(grep -E "^bridge [0-9]+" "$SW_FILE" | awk '{print $2}'); do
+    if ! grep -q "export-bridge $BRIDGE_ID" "$SW_FILE"; then
+      if grep -q "export-vrf CORE" "$SW_FILE"; then
+        sed -i "/^ export-vrf CORE$/a\ export-bridge $BRIDGE_ID" "$SW_FILE"
+      else
+        sed -i "/^ vrf p4$/a\ export-bridge $BRIDGE_ID" "$SW_FILE"
+      fi
+    fi
+  done
 }
 
 configure_interfaces_mac_sw_file() {
@@ -236,6 +284,16 @@ elif [ "$DATAPLANE_TYPE" = "p4emu" ]; then
   create_vrf_p4_sw_file
   create_p4_server_sw_file
   export_ports_p4_server_interfaces_sw_file
+fi
+
+# default vrf initialization
+if [ "$INIT_VRF" = "true" ]; then
+  create_vrf_core
+  if [ "$DATAPLANE_TYPE" = "p4emu" ]; then
+    add_export_vrf_to_p4server
+    add_export_bridges_to_p4server
+  fi
+  add_vrf_forwarding_to_interfaces
 fi
 
 chmod u+x $CONF_DIR/hwdet-*.sh
