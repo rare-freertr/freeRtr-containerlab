@@ -4,9 +4,15 @@ topology:
   nodes:
     rtr1:
       kind: rare
-      image: ghcr.io/rare-freertr/freertr-containerlab:latest 
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "pcapInt"
+        INIT_VRF: "true"
     rtr2:
       kind: rare
-      image: ghcr.io/rare-freertr/freertr-containerlab:latest 
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "p4emu"
+        INIT_VRF: "true"
   links:
     - endpoints: ["rtr1:eth1","rtr2:eth1"]
