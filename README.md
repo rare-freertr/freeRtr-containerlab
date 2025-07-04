@@ -64,6 +64,43 @@ topology:
     - endpoints: ["rtr1:eth1","rtr2:eth1"]
 ```
 
+* VRF Initialization
+
+You can also configure automatic VRF initialization for each router using the `INIT_VRF` environment variable. This is particularly useful when using the P4 dataplane:
+
+- `false` (default): No automatic VRF initialization
+- `true`: Automatically initializes the following:
+  - Creates the `vrf definition CORE` if it doesn't exist
+  - Adds `vrf forwarding CORE` to all interfaces (except ethernet0(p4 interconnect) and ethernet255(mgmt))
+  - For P4 dataplane only:
+    - Adds `export-vrf CORE` to the `server p4lang p4` section
+    - Exports all bridges found in the configuration to the p4lang server with `export-bridge <ID>` entries
+  
+
+Example configuration in `rtr000.clab.yml`:
+```yaml
+name: rtr000
+
+topology:
+  nodes:
+    rtr1:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "p4emu"
+        INIT_VRF: "true"
+    rtr2:
+      kind: rare
+      image: ghcr.io/rare-freertr/freertr-containerlab:latest
+      env:
+        DATAPLANE_TYPE: "p4emu"
+        INIT_VRF: "true"
+  links:
+    - endpoints: ["rtr1:eth1","rtr2:eth1"]
+```
+
+This automatically prepares the routers with the necessary VRF configuration for the CORE VRF, which simplify initial setup.
+
 * Artefact folder for each node will be created during lab initialisation (e.g `rtr1` and `rtr2`)
 
 Which format is clab-`lab-name`/`node-name`/run
@@ -295,6 +332,3 @@ Special thanks to:
   * [freeRtr](www.freertr.org) 
   
   Particularly [Csaba MATE](http://mc36.nop.hu/) for his `almost` :innocent: bug free code !
-  
-  
-
