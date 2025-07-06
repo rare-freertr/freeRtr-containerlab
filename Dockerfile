@@ -1,5 +1,5 @@
 FROM debian:sid
-MAINTAINER Frederic LOUI <frederic.loui@@renater.fr>
+LABEL org.opencontainers.image.authors="frederic.loui@renater.fr"
 
 WORKDIR /root
 
