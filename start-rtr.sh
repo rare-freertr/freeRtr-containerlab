@@ -27,7 +27,7 @@ while (true); do
   cd /rtr/run/conf/
   stty raw < /dev/tty
   java -jar $TRG/rtr.jar routerc $CONF_DIR/rtr-
-  rename_mgmt_interface
+  remove_p4_telnet
   if [ $? -eq 4 ] ; then
     sync
     reboot -f

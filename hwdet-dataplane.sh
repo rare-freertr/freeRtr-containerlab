@@ -24,7 +24,6 @@ if [ "$FIRST_BOOT" = "true" ]; then
         java -jar $TRG/rtr.jar test hwext path $CONF_DIR/rtr- dataplane $DATAPLANE_TYPE
         remove_p4_telnet
     fi
-    rename_mgmt_interface
     initialize_rtr
 
 elif [ $DATAPLANE_STATUS_CODE -eq 0 ]; then
@@ -48,7 +47,6 @@ elif [ $DATAPLANE_STATUS_CODE -eq 0 ]; then
         echo "dataplane type is $DATAPLANE_TYPE"
         java -jar $TRG/rtr.jar test hwext path $CONF_DIR/rtr- dataplane $DATAPLANE_TYPE
         remove_p4_telnet
-        rename_mgmt_interface
         initialize_rtr
     fi
 elif [ $DATAPLANE_STATUS_CODE -eq 1 ]; then
@@ -64,7 +62,6 @@ elif [ $DATAPLANE_STATUS_CODE -eq 1 ]; then
         echo "dataplane type is $DATAPLANE_TYPE"
         java -jar $TRG/rtr.jar test hwext path $CONF_DIR/rtr- dataplane $DATAPLANE_TYPE
         remove_p4_telnet
-        rename_mgmt_interface
         initialize_rtr
     fi
 elif [ $NODE_INTFS_STATUS_CODE -eq 0 ] || [ $NODE_INTFS_STATUS_CODE -eq 1 ]; then
@@ -80,7 +77,6 @@ elif [ $NODE_INTFS_STATUS_CODE -eq 0 ] || [ $NODE_INTFS_STATUS_CODE -eq 1 ]; the
         echo "dataplane type is $DATAPLANE_TYPE"
         java -jar $TRG/rtr.jar test hwext path $CONF_DIR/rtr- dataplane $DATAPLANE_TYPE
         remove_p4_telnet
-        rename_mgmt_interface
         initialize_rtr
     fi
 fi
