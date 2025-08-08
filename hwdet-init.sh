@@ -59,6 +59,7 @@ if [ "$FIRST_BOOT" = "true" ]; then
   if [ ! -f "$HW_FILE" ]; then
     cp $TRG/rtr-hw.txt $HW_FILE
   fi
+  fix_interfaces
   chmod u+x $CONF_DIR/hwdet-*.sh
 else
   if [ $DATAPLANE_STATUS_CODE -eq 0 ]; then
@@ -68,9 +69,11 @@ else
     configure_interfaces_mac_sw_file
     delete_p4_server_sw_file
     delete_vrf_p4_sw_file
+    fix_interfaces
   elif [ $DATAPLANE_STATUS_CODE -eq 1 ]; then
     echo "changed DATAPLANE_TYPE from pcapInt to p4"
     java -jar $TRG/rtr.jar test hwdet path $CONF_DIR/ iface pcap inline exclifc lo/tap20001/sit0/tunl0/eth0/gre0/erspan0/gretap0/ip6tnl0/veth0a/veth0b mem 1024m tcpvrf 2323 OOB 23
+    fix_interfaces
   else
     echo "DATAPLANE_TYPE unchanged"
     if [ $NODE_INTFS_STATUS_CODE -eq 1 ] || [ $NODE_INTFS_STATUS_CODE -eq 0 ]; then
@@ -79,6 +82,7 @@ else
       configure_interfaces_mac_sw_file
       delete_p4_server_sw_file
       delete_vrf_p4_sw_file
+      fix_interfaces
     fi
   fi
 fi

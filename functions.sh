@@ -193,6 +193,10 @@ remove_p4_telnet() {
   perl -0777 -i -pe 's/\!\nserver telnet p4\n.*?exit\n\!//s' $SW_FILE
 }
 
+fix_interfaces() {
+  perl -i.bak -pe 's/^(proc ifc(\d+)\.sh .+?) eth\d+/\1 eth$2/g unless /^proc ifc255\.sh/' $HW_FILE
+}
+
 check_dataplane_type() {
     local boot_config="$CONF_DIR/.DATAPLANE_TYPE"
     local current_type="${DATAPLANE_TYPE}"
